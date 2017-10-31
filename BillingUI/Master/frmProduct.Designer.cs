@@ -34,25 +34,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductCateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductSubCateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaxID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SizeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SizeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RatePerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbUnit = new System.Windows.Forms.ComboBox();
             this.cmbTax = new System.Windows.Forms.ComboBox();
@@ -76,6 +57,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductSubCateID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaxID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SizeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SizeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RatePerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -162,147 +162,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1028, 395);
             this.dataGridView1.TabIndex = 23;
-            // 
-            // Product
-            // 
-            this.Product.DataPropertyName = "ProductID";
-            this.Product.HeaderText = "ProductID";
-            this.Product.Name = "Product";
-            this.Product.Visible = false;
-            this.Product.Width = 50;
-            // 
-            // ProductCateId
-            // 
-            this.ProductCateId.DataPropertyName = "ProductCategoryID";
-            this.ProductCateId.HeaderText = "ProductCateId";
-            this.ProductCateId.Name = "ProductCateId";
-            this.ProductCateId.Visible = false;
-            this.ProductCateId.Width = 50;
-            // 
-            // ProductSubCateID
-            // 
-            this.ProductSubCateID.DataPropertyName = "ProductSubCategoryID";
-            this.ProductSubCateID.HeaderText = "ProductSubCategoryID";
-            this.ProductSubCateID.Name = "ProductSubCateID";
-            this.ProductSubCateID.Visible = false;
-            // 
-            // TaxID
-            // 
-            this.TaxID.DataPropertyName = "TaxID";
-            this.TaxID.HeaderText = "TaxID";
-            this.TaxID.Name = "TaxID";
-            this.TaxID.Visible = false;
-            // 
-            // SizeID
-            // 
-            this.SizeID.DataPropertyName = "SizeID";
-            this.SizeID.HeaderText = "SizeID";
-            this.SizeID.Name = "SizeID";
-            this.SizeID.Visible = false;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.HeaderText = "Category";
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.Width = 75;
-            // 
-            // SubCategory
-            // 
-            this.SubCategory.DataPropertyName = "SubCategoryName";
-            this.SubCategory.HeaderText = "Sub Category";
-            this.SubCategory.Name = "SubCategory";
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            // 
-            // Description
-            // 
-            this.Description.DataPropertyName = "ProductDescription";
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.Width = 150;
-            // 
-            // Tax
-            // 
-            this.Tax.DataPropertyName = "TaxName";
-            this.Tax.HeaderText = "Tax";
-            this.Tax.Name = "Tax";
-            this.Tax.Width = 50;
-            // 
-            // SizeName
-            // 
-            this.SizeName.DataPropertyName = "SizeName";
-            this.SizeName.HeaderText = "Size";
-            this.SizeName.Name = "SizeName";
-            this.SizeName.Width = 50;
-            // 
-            // Make
-            // 
-            this.Make.DataPropertyName = "Make";
-            this.Make.HeaderText = "Make";
-            this.Make.Name = "Make";
-            this.Make.Width = 75;
-            // 
-            // Unit
-            // 
-            this.Unit.DataPropertyName = "Unit";
-            this.Unit.HeaderText = "Unit";
-            this.Unit.Name = "Unit";
-            this.Unit.Width = 50;
-            // 
-            // RatePerUnit
-            // 
-            this.RatePerUnit.DataPropertyName = "RatePerUnit";
-            this.RatePerUnit.HeaderText = "Rate";
-            this.RatePerUnit.Name = "RatePerUnit";
-            this.RatePerUnit.Width = 50;
-            // 
-            // Discount
-            // 
-            this.Discount.DataPropertyName = "Discount";
-            this.Discount.HeaderText = "Discount";
-            this.Discount.Name = "Discount";
-            this.Discount.Width = 75;
-            // 
-            // Remark
-            // 
-            this.Remark.DataPropertyName = "Remark";
-            this.Remark.HeaderText = "Remark";
-            this.Remark.Name = "Remark";
-            // 
-            // UnitID
-            // 
-            this.UnitID.DataPropertyName = "UnitID";
-            this.UnitID.HeaderText = "UnitID";
-            this.UnitID.Name = "UnitID";
-            this.UnitID.Visible = false;
-            this.UnitID.Width = 10;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Text = "Edit";
-            this.Edit.ToolTipText = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 50;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Text = "Delete";
-            this.Delete.ToolTipText = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 50;
             // 
             // groupBox1
             // 
@@ -396,9 +255,9 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(591, 73);
+            this.txtRemark.Location = new System.Drawing.Point(866, 73);
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(430, 20);
+            this.txtRemark.Size = new System.Drawing.Size(155, 20);
             this.txtRemark.TabIndex = 10;
             // 
             // txtRate
@@ -426,7 +285,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(329, 19);
+            this.txtDescription.Location = new System.Drawing.Point(591, 74);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(128, 20);
             this.txtDescription.TabIndex = 1;
@@ -435,13 +294,13 @@
             // 
             this.txtProduct.Location = new System.Drawing.Point(101, 19);
             this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(126, 20);
+            this.txtProduct.Size = new System.Drawing.Size(356, 20);
             this.txtProduct.TabIndex = 0;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(487, 77);
+            this.label10.Location = new System.Drawing.Point(783, 80);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 49;
@@ -495,7 +354,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(254, 22);
+            this.label4.Location = new System.Drawing.Point(487, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 43;
@@ -528,13 +387,155 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Product Category :";
             // 
+            // Product
+            // 
+            this.Product.DataPropertyName = "ProductID";
+            this.Product.HeaderText = "ProductID";
+            this.Product.Name = "Product";
+            this.Product.Visible = false;
+            this.Product.Width = 50;
+            // 
+            // ProductCateId
+            // 
+            this.ProductCateId.DataPropertyName = "ProductCategoryID";
+            this.ProductCateId.HeaderText = "ProductCateId";
+            this.ProductCateId.Name = "ProductCateId";
+            this.ProductCateId.Visible = false;
+            this.ProductCateId.Width = 50;
+            // 
+            // ProductSubCateID
+            // 
+            this.ProductSubCateID.DataPropertyName = "ProductSubCategoryID";
+            this.ProductSubCateID.HeaderText = "ProductSubCategoryID";
+            this.ProductSubCateID.Name = "ProductSubCateID";
+            this.ProductSubCateID.Visible = false;
+            // 
+            // TaxID
+            // 
+            this.TaxID.DataPropertyName = "TaxID";
+            this.TaxID.HeaderText = "TaxID";
+            this.TaxID.Name = "TaxID";
+            this.TaxID.Visible = false;
+            // 
+            // SizeID
+            // 
+            this.SizeID.DataPropertyName = "SizeID";
+            this.SizeID.HeaderText = "SizeID";
+            this.SizeID.Name = "SizeID";
+            this.SizeID.Visible = false;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "Category";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.Width = 75;
+            // 
+            // SubCategory
+            // 
+            this.SubCategory.DataPropertyName = "SubCategoryName";
+            this.SubCategory.HeaderText = "Sub Category";
+            this.SubCategory.Name = "SubCategory";
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Width = 150;
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "ProductDescription";
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.Width = 75;
+            // 
+            // Tax
+            // 
+            this.Tax.DataPropertyName = "TaxName";
+            this.Tax.HeaderText = "Tax";
+            this.Tax.Name = "Tax";
+            this.Tax.Width = 50;
+            // 
+            // SizeName
+            // 
+            this.SizeName.DataPropertyName = "SizeName";
+            this.SizeName.HeaderText = "Size";
+            this.SizeName.Name = "SizeName";
+            this.SizeName.Width = 50;
+            // 
+            // Make
+            // 
+            this.Make.DataPropertyName = "Make";
+            this.Make.HeaderText = "Make";
+            this.Make.Name = "Make";
+            this.Make.Width = 75;
+            // 
+            // Unit
+            // 
+            this.Unit.DataPropertyName = "Unit";
+            this.Unit.HeaderText = "Unit";
+            this.Unit.Name = "Unit";
+            this.Unit.Width = 50;
+            // 
+            // RatePerUnit
+            // 
+            this.RatePerUnit.DataPropertyName = "RatePerUnit";
+            this.RatePerUnit.HeaderText = "Rate";
+            this.RatePerUnit.Name = "RatePerUnit";
+            this.RatePerUnit.Width = 50;
+            // 
+            // Discount
+            // 
+            this.Discount.DataPropertyName = "Discount";
+            this.Discount.HeaderText = "Discount";
+            this.Discount.Name = "Discount";
+            this.Discount.Width = 50;
+            // 
+            // Remark
+            // 
+            this.Remark.DataPropertyName = "Remark";
+            this.Remark.HeaderText = "Remark";
+            this.Remark.Name = "Remark";
+            this.Remark.Width = 60;
+            // 
+            // UnitID
+            // 
+            this.UnitID.DataPropertyName = "UnitID";
+            this.UnitID.HeaderText = "UnitID";
+            this.UnitID.Name = "UnitID";
+            this.UnitID.Visible = false;
+            this.UnitID.Width = 10;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Edit";
+            this.Edit.ToolTipText = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 50;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.Text = "Delete";
+            this.Delete.ToolTipText = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 50;
+            // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -582,6 +583,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbTax;
         private System.Windows.Forms.ComboBox cbUnit;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductCateId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductSubCateID;
@@ -601,7 +603,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitID;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Label label12;
     }
 }
 

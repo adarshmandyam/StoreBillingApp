@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dvStock = new System.Windows.Forms.DataGridView();
@@ -85,6 +85,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvStock)).BeginInit();
             this.panel2.SuspendLayout();
@@ -184,9 +185,9 @@
             // Quantity
             // 
             this.Quantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle6;
             this.Quantity.HeaderText = "Quantity";
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
@@ -227,9 +228,9 @@
             // TaxAmt
             // 
             this.TaxAmt.DataPropertyName = "TaxAmount";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.TaxAmt.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.TaxAmt.DefaultCellStyle = dataGridViewCellStyle7;
             this.TaxAmt.HeaderText = "TaxAmt";
             this.TaxAmt.Name = "TaxAmt";
             this.TaxAmt.ReadOnly = true;
@@ -246,9 +247,9 @@
             // DiscountAmt
             // 
             this.DiscountAmt.DataPropertyName = "DiscountAmount";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.DiscountAmt.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.DiscountAmt.DefaultCellStyle = dataGridViewCellStyle8;
             this.DiscountAmt.HeaderText = "DiscountAmt";
             this.DiscountAmt.Name = "DiscountAmt";
             this.DiscountAmt.ReadOnly = true;
@@ -257,9 +258,9 @@
             // TotalAmt
             // 
             this.TotalAmt.DataPropertyName = "TotalAmount";
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.TotalAmt.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = "0";
+            this.TotalAmt.DefaultCellStyle = dataGridViewCellStyle9;
             this.TotalAmt.HeaderText = "TotalAmt";
             this.TotalAmt.Name = "TotalAmt";
             this.TotalAmt.ReadOnly = true;
@@ -268,9 +269,9 @@
             // Remark
             // 
             this.Remark.DataPropertyName = "Remark";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Remark.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.Remark.DefaultCellStyle = dataGridViewCellStyle10;
             this.Remark.HeaderText = "Remark";
             this.Remark.Name = "Remark";
             this.Remark.ReadOnly = true;
@@ -308,6 +309,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnRefresh);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Location = new System.Drawing.Point(25, 272);
@@ -607,13 +609,22 @@
             this.label3.TabIndex = 42;
             this.label3.Text = "Product :";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(678, 13);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 67;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -684,5 +695,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

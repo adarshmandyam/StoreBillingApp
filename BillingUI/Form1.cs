@@ -54,10 +54,8 @@ namespace BillingUI
                         txtLoginId.Focus();                      
 
                     }
-                }
-               
-            }
-           
+                }               
+            }           
         }
 
         private  bool Validation()
@@ -82,6 +80,12 @@ namespace BillingUI
         {
             txtLoginId.Text = string.Empty;
             txtPassword.Text = string.Empty;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword frm = new ForgotPassword();
+            frm.Show();
         }
     }
 }

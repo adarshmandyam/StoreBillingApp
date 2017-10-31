@@ -50,7 +50,7 @@ namespace AC.Billing.UI.Master
             {
                 productBLL.ProductSave(ProductID, Convert.ToInt32(cmbProductCategory.SelectedValue.ToString()), Convert.ToInt32(cmbSubCategory.SelectedValue.ToString()),
                     txtProduct.Text.Trim(), txtDescription.Text.Trim(), txtMake.Text.Trim(), cbUnit.SelectedText.Trim(), Convert.ToInt32(cmbTax.SelectedValue.ToString()),
-                    Convert.ToInt32(cmbSize.SelectedValue.ToString()), Convert.ToInt32(txtRate.Text.Trim()), txtDiscount.Text.Trim(), txtRemark.Text.Trim(),DateTime.Now,
+                    Convert.ToInt32(cmbSize.SelectedValue.ToString()), Convert.ToDecimal(txtRate.Text.Trim()), txtDiscount.Text.Trim(), txtRemark.Text.Trim(),DateTime.Now,
                     USERID, USERID, Convert.ToInt32(cbUnit.SelectedValue.ToString()));
                 ProductID = 0;
                 ClearFields();

@@ -36,6 +36,31 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.ordGrid = new System.Windows.Forms.DataGrid();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPrintPreview = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnDeleteRow = new System.Windows.Forms.Button();
+            this.btnAddRow = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.gvDeliveryNote = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtEstimatedDate = new System.Windows.Forms.DateTimePicker();
+            this.dtDeliveryDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbDeliveryMode = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.cmbInvoice = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.IsDelete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DeliveryNoteItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeliveryNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,18 +80,6 @@
             this.TotalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ordGrid = new System.Windows.Forms.DataGrid();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnPrintPreview = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnDeleteRow = new System.Windows.Forms.Button();
-            this.btnAddRow = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.gvDeliveryNote = new System.Windows.Forms.DataGridView();
             this.DeliveryNoteID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,19 +90,6 @@
             this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editparent = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DeleteParent = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtEstimatedDate = new System.Windows.Forms.DateTimePicker();
-            this.dtDeliveryDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbDeliveryMode = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtRemarks = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.cmbInvoice = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordGrid)).BeginInit();
@@ -156,161 +156,6 @@
             this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
             this.dataGridView2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView2_EditingControlShowing);
             // 
-            // IsDelete
-            // 
-            this.IsDelete.HeaderText = "Is Delete";
-            this.IsDelete.Name = "IsDelete";
-            this.IsDelete.Width = 75;
-            // 
-            // DeliveryNoteItemID
-            // 
-            this.DeliveryNoteItemID.DataPropertyName = "DeliveryNoteItemID";
-            this.DeliveryNoteItemID.HeaderText = "DeliveryNoteItemID";
-            this.DeliveryNoteItemID.Name = "DeliveryNoteItemID";
-            this.DeliveryNoteItemID.ToolTipText = "DeliveryNoteItemID";
-            this.DeliveryNoteItemID.Visible = false;
-            // 
-            // DeliveryNote
-            // 
-            this.DeliveryNote.DataPropertyName = "DeliveryNoteID";
-            this.DeliveryNote.HeaderText = "DeliveryNoteID";
-            this.DeliveryNote.Name = "DeliveryNote";
-            this.DeliveryNote.Visible = false;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.HeaderText = "ProductID";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.Visible = false;
-            // 
-            // TaxID
-            // 
-            this.TaxID.DataPropertyName = "TaxID";
-            this.TaxID.HeaderText = "TaxID";
-            this.TaxID.Name = "TaxID";
-            this.TaxID.Visible = false;
-            // 
-            // SizeID
-            // 
-            this.SizeID.DataPropertyName = "SizeID";
-            this.SizeID.HeaderText = "SizeID";
-            this.SizeID.Name = "SizeID";
-            this.SizeID.Visible = false;
-            // 
-            // Product
-            // 
-            this.Product.DataPropertyName = "ProductName";
-            this.Product.HeaderText = "Product";
-            this.Product.Name = "Product";
-            this.Product.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Product.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Make
-            // 
-            this.Make.DataPropertyName = "Make";
-            this.Make.HeaderText = "Make";
-            this.Make.Name = "Make";
-            this.Make.ReadOnly = true;
-            this.Make.Width = 50;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 60;
-            // 
-            // Unit
-            // 
-            this.Unit.DataPropertyName = "Unit";
-            this.Unit.HeaderText = "Unit";
-            this.Unit.Name = "Unit";
-            this.Unit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Unit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Unit.Width = 75;
-            // 
-            // RateperUnit
-            // 
-            this.RateperUnit.DataPropertyName = "RatePerUnit";
-            this.RateperUnit.HeaderText = "Rate/Unit";
-            this.RateperUnit.Name = "RateperUnit";
-            this.RateperUnit.Width = 75;
-            // 
-            // Size
-            // 
-            this.Size.DataPropertyName = "SizeType";
-            this.Size.HeaderText = "Size Type";
-            this.Size.Name = "Size";
-            this.Size.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Tax
-            // 
-            this.Tax.DataPropertyName = "TaxPercentage";
-            this.Tax.HeaderText = "Tax";
-            this.Tax.Name = "Tax";
-            this.Tax.Width = 50;
-            // 
-            // TaxAmt
-            // 
-            this.TaxAmt.DataPropertyName = "TaxAmount";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.TaxAmt.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TaxAmt.HeaderText = "TaxAmt";
-            this.TaxAmt.Name = "TaxAmt";
-            this.TaxAmt.ReadOnly = true;
-            this.TaxAmt.Width = 70;
-            // 
-            // Discount
-            // 
-            this.Discount.DataPropertyName = "Discount";
-            this.Discount.HeaderText = "Discount";
-            this.Discount.Name = "Discount";
-            this.Discount.Width = 70;
-            // 
-            // DiscountAmt
-            // 
-            this.DiscountAmt.DataPropertyName = "DiscountAmount";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.DiscountAmt.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DiscountAmt.HeaderText = "DiscountAmt";
-            this.DiscountAmt.Name = "DiscountAmt";
-            this.DiscountAmt.ReadOnly = true;
-            this.DiscountAmt.Width = 85;
-            // 
-            // TotalAmt
-            // 
-            this.TotalAmt.DataPropertyName = "TotalAmount";
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.TotalAmt.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TotalAmt.HeaderText = "TotalAmt";
-            this.TotalAmt.Name = "TotalAmt";
-            this.TotalAmt.ReadOnly = true;
-            this.TotalAmt.Width = 75;
-            // 
-            // Remark
-            // 
-            this.Remark.DataPropertyName = "Remark";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Remark.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Remark.HeaderText = "Remark";
-            this.Remark.Name = "Remark";
-            // 
-            // UnitID
-            // 
-            this.UnitID.DataPropertyName = "UnitID";
-            this.UnitID.HeaderText = "UnitID";
-            this.UnitID.Name = "UnitID";
-            this.UnitID.Visible = false;
-            // 
             // ordGrid
             // 
             this.ordGrid.DataMember = "";
@@ -332,12 +177,12 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(900, 172);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 13;
             this.lblTotal.Text = "Total";
-            this.lblTotal.ForeColor =  System.Drawing.Color.White;
             // 
             // panel2
             // 
@@ -444,81 +289,8 @@
             this.DeleteParent});
             this.gvDeliveryNote.Location = new System.Drawing.Point(3, 3);
             this.gvDeliveryNote.Name = "gvDeliveryNote";
-            this.gvDeliveryNote.Size = new System.Drawing.Size(859, 157);
+            this.gvDeliveryNote.Size = new System.Drawing.Size(902, 157);
             this.gvDeliveryNote.TabIndex = 7;
-            // 
-            // DeliveryNoteID1
-            // 
-            this.DeliveryNoteID1.DataPropertyName = "DeliveryNoteID";
-            this.DeliveryNoteID1.HeaderText = "DeliveryNoteID";
-            this.DeliveryNoteID1.Name = "DeliveryNoteID1";
-            this.DeliveryNoteID1.Visible = false;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "CustomerName";
-            this.CustomerName.Name = "CustomerName";
-            // 
-            // InvoiceID
-            // 
-            this.InvoiceID.DataPropertyName = "InvoiceID";
-            this.InvoiceID.HeaderText = "InvoiceID";
-            this.InvoiceID.Name = "InvoiceID";
-            this.InvoiceID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // DeliveryDate
-            // 
-            this.DeliveryDate.DataPropertyName = "DeliveryDate";
-            this.DeliveryDate.HeaderText = "Delivery Date";
-            this.DeliveryDate.Name = "DeliveryDate";
-            // 
-            // EstimatedDate
-            // 
-            this.EstimatedDate.DataPropertyName = "EstimatedDate";
-            this.EstimatedDate.HeaderText = "Estimated Date";
-            this.EstimatedDate.Name = "EstimatedDate";
-            // 
-            // DeliveryMode
-            // 
-            this.DeliveryMode.DataPropertyName = "DeliveryMode";
-            this.DeliveryMode.HeaderText = "Delivery Mode";
-            this.DeliveryMode.Name = "DeliveryMode";
-            // 
-            // DeliveryModeID
-            // 
-            this.DeliveryModeID.DataPropertyName = "DeliveryModeID";
-            this.DeliveryModeID.HeaderText = "DeliveryModeID";
-            this.DeliveryModeID.Name = "DeliveryModeID";
-            this.DeliveryModeID.ToolTipText = "DeliveryModeID";
-            // 
-            // Remarks
-            // 
-            this.Remarks.DataPropertyName = "Remarks";
-            this.Remarks.HeaderText = "Remark";
-            this.Remarks.Name = "Remarks";
-            // 
-            // Editparent
-            // 
-            this.Editparent.HeaderText = "Edit";
-            this.Editparent.Name = "Editparent";
-            this.Editparent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editparent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editparent.Text = "Edit";
-            this.Editparent.ToolTipText = "Edit";
-            this.Editparent.UseColumnTextForButtonValue = true;
-            this.Editparent.Width = 50;
-            // 
-            // DeleteParent
-            // 
-            this.DeleteParent.HeaderText = "Delete";
-            this.DeleteParent.Name = "DeleteParent";
-            this.DeleteParent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeleteParent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DeleteParent.Text = "Delete";
-            this.DeleteParent.ToolTipText = "Delete";
-            this.DeleteParent.UseColumnTextForButtonValue = true;
-            this.DeleteParent.Width = 50;
             // 
             // groupBox1
             // 
@@ -645,13 +417,243 @@
             this.label4.TabIndex = 70;
             this.label4.Text = "Invoice No.:";
             // 
+            // IsDelete
+            // 
+            this.IsDelete.HeaderText = "Is Delete";
+            this.IsDelete.Name = "IsDelete";
+            this.IsDelete.Width = 75;
+            // 
+            // DeliveryNoteItemID
+            // 
+            this.DeliveryNoteItemID.DataPropertyName = "DeliveryNoteItemID";
+            this.DeliveryNoteItemID.HeaderText = "DeliveryNoteItemID";
+            this.DeliveryNoteItemID.Name = "DeliveryNoteItemID";
+            this.DeliveryNoteItemID.ToolTipText = "DeliveryNoteItemID";
+            this.DeliveryNoteItemID.Visible = false;
+            // 
+            // DeliveryNote
+            // 
+            this.DeliveryNote.DataPropertyName = "DeliveryNoteID";
+            this.DeliveryNote.HeaderText = "DeliveryNoteID";
+            this.DeliveryNote.Name = "DeliveryNote";
+            this.DeliveryNote.Visible = false;
+            // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.HeaderText = "ProductID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.Visible = false;
+            // 
+            // TaxID
+            // 
+            this.TaxID.DataPropertyName = "TaxID";
+            this.TaxID.HeaderText = "TaxID";
+            this.TaxID.Name = "TaxID";
+            this.TaxID.Visible = false;
+            // 
+            // SizeID
+            // 
+            this.SizeID.DataPropertyName = "SizeID";
+            this.SizeID.HeaderText = "SizeID";
+            this.SizeID.Name = "SizeID";
+            this.SizeID.Visible = false;
+            // 
+            // Product
+            // 
+            this.Product.DataPropertyName = "ProductName";
+            this.Product.HeaderText = "Product";
+            this.Product.Name = "Product";
+            this.Product.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Product.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Product.Width = 175;
+            // 
+            // Make
+            // 
+            this.Make.DataPropertyName = "Make";
+            this.Make.HeaderText = "Make";
+            this.Make.Name = "Make";
+            this.Make.ReadOnly = true;
+            this.Make.Width = 50;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 60;
+            // 
+            // Unit
+            // 
+            this.Unit.DataPropertyName = "Unit";
+            this.Unit.HeaderText = "Unit";
+            this.Unit.Name = "Unit";
+            this.Unit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Unit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Unit.Width = 40;
+            // 
+            // RateperUnit
+            // 
+            this.RateperUnit.DataPropertyName = "RatePerUnit";
+            this.RateperUnit.HeaderText = "Rate/Unit";
+            this.RateperUnit.Name = "RateperUnit";
+            this.RateperUnit.Width = 75;
+            // 
+            // Size
+            // 
+            this.Size.DataPropertyName = "SizeType";
+            this.Size.HeaderText = "Size ";
+            this.Size.Name = "Size";
+            this.Size.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Size.Width = 50;
+            // 
+            // Tax
+            // 
+            this.Tax.DataPropertyName = "TaxPercentage";
+            this.Tax.HeaderText = "Tax";
+            this.Tax.Name = "Tax";
+            this.Tax.Width = 40;
+            // 
+            // TaxAmt
+            // 
+            this.TaxAmt.DataPropertyName = "TaxAmount";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.TaxAmt.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TaxAmt.HeaderText = "TaxAmt";
+            this.TaxAmt.Name = "TaxAmt";
+            this.TaxAmt.ReadOnly = true;
+            this.TaxAmt.Width = 70;
+            // 
+            // Discount
+            // 
+            this.Discount.DataPropertyName = "Discount";
+            this.Discount.HeaderText = "Discount";
+            this.Discount.Name = "Discount";
+            this.Discount.Width = 60;
+            // 
+            // DiscountAmt
+            // 
+            this.DiscountAmt.DataPropertyName = "DiscountAmount";
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.DiscountAmt.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DiscountAmt.HeaderText = "Disc Amt";
+            this.DiscountAmt.Name = "DiscountAmt";
+            this.DiscountAmt.ReadOnly = true;
+            this.DiscountAmt.Width = 75;
+            // 
+            // TotalAmt
+            // 
+            this.TotalAmt.DataPropertyName = "TotalAmount";
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.TotalAmt.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TotalAmt.HeaderText = "TotalAmt";
+            this.TotalAmt.Name = "TotalAmt";
+            this.TotalAmt.ReadOnly = true;
+            this.TotalAmt.Width = 75;
+            // 
+            // Remark
+            // 
+            this.Remark.DataPropertyName = "Remark";
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Remark.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Remark.HeaderText = "Remark";
+            this.Remark.Name = "Remark";
+            // 
+            // UnitID
+            // 
+            this.UnitID.DataPropertyName = "UnitID";
+            this.UnitID.HeaderText = "UnitID";
+            this.UnitID.Name = "UnitID";
+            this.UnitID.Visible = false;
+            // 
+            // DeliveryNoteID1
+            // 
+            this.DeliveryNoteID1.DataPropertyName = "DeliveryNoteID";
+            this.DeliveryNoteID1.HeaderText = "DeliveryNoteID";
+            this.DeliveryNoteID1.Name = "DeliveryNoteID1";
+            this.DeliveryNoteID1.Visible = false;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "CustomerName";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.Width = 150;
+            // 
+            // InvoiceID
+            // 
+            this.InvoiceID.DataPropertyName = "InvoiceID";
+            this.InvoiceID.HeaderText = "InvoiceID";
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // DeliveryDate
+            // 
+            this.DeliveryDate.DataPropertyName = "DeliveryDate";
+            this.DeliveryDate.HeaderText = "Delivery Date";
+            this.DeliveryDate.Name = "DeliveryDate";
+            // 
+            // EstimatedDate
+            // 
+            this.EstimatedDate.DataPropertyName = "EstimatedDate";
+            this.EstimatedDate.HeaderText = "Estimated Date";
+            this.EstimatedDate.Name = "EstimatedDate";
+            // 
+            // DeliveryMode
+            // 
+            this.DeliveryMode.DataPropertyName = "DeliveryMode";
+            this.DeliveryMode.HeaderText = "Delivery Mode";
+            this.DeliveryMode.Name = "DeliveryMode";
+            // 
+            // DeliveryModeID
+            // 
+            this.DeliveryModeID.DataPropertyName = "DeliveryModeID";
+            this.DeliveryModeID.HeaderText = "DeliveryModeID";
+            this.DeliveryModeID.Name = "DeliveryModeID";
+            this.DeliveryModeID.ToolTipText = "DeliveryModeID";
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "Remarks";
+            this.Remarks.HeaderText = "Remark";
+            this.Remarks.Name = "Remarks";
+            // 
+            // Editparent
+            // 
+            this.Editparent.HeaderText = "Edit";
+            this.Editparent.Name = "Editparent";
+            this.Editparent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editparent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Editparent.Text = "Edit";
+            this.Editparent.ToolTipText = "Edit";
+            this.Editparent.UseColumnTextForButtonValue = true;
+            this.Editparent.Width = 50;
+            // 
+            // DeleteParent
+            // 
+            this.DeleteParent.HeaderText = "Delete";
+            this.DeleteParent.Name = "DeleteParent";
+            this.DeleteParent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeleteParent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DeleteParent.Text = "Delete";
+            this.DeleteParent.ToolTipText = "Delete";
+            this.DeleteParent.UseColumnTextForButtonValue = true;
+            this.DeleteParent.Width = 50;
+            // 
             // frmDeliveryNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -693,16 +695,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView gvDeliveryNote;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryNoteID1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstimatedDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryMode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryModeID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
-        private System.Windows.Forms.DataGridViewButtonColumn Editparent;
-        private System.Windows.Forms.DataGridViewButtonColumn DeleteParent;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnDeleteRow;
@@ -713,6 +705,7 @@
         private System.Windows.Forms.Button btnPrintPreview;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryNoteItemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryNote;
@@ -732,6 +725,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitID;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryNoteID1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstimatedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryMode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DeliveryModeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
+        private System.Windows.Forms.DataGridViewButtonColumn Editparent;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteParent;
     }
 }

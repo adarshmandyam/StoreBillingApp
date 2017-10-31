@@ -27,7 +27,9 @@ namespace AC.Billing.UI.Transaction
         bool bFirstPage = false; //Used to check whether we are printing first page
         bool bNewPage = false;// Used to check whether we are printing a new page
         int iHeaderHeight = 0; //Used for the header height
-       
+
+        StringBuilder html;
+
         //Grid Column
         public const int ConstIsDelete = 0;
         public const int ConstInvoiceItemID = 1;
@@ -161,6 +163,146 @@ namespace AC.Billing.UI.Transaction
             PrintGrid.DataSource = dTable;
             PrintGrid.AutoGenerateColumns = false;
 
+           // DataTable dt = (DataTable)PrintGrid.DataSource
+            string Html = GenerateHtml((DataTable)PrintGrid.DataSource);
+
+        }
+
+       public string GenerateHtml(DataTable dt)
+        {
+            html = new StringBuilder();
+            // Create string constants 
+
+             string FormName = "form1";
+
+
+
+
+
+            html.Append(" <form id=");
+            html.Append("\"form1");
+            html.Append(">");
+            html.Append("< table style = "width: 100 %; " >");
+            html.Append("< tr >");
+            html.Append(" < td class="auto - style3" colspan="2">SUNRISE MARKETING AGENTS</td>");
+            html.Append(" <td class="auto - style5">Invoice No.</td>");
+            html.Append(" <td class="auto - style5">Dated</td>");
+            html.Append(" </tr>");
+            html.Append("< tr>");
+            html.Append("< td class="auto - style3" colspan="2">Laxmi - Govind</td>");
+            html.Append("<td class="auto - style5"><strong>KTR00144566</strong></td");
+            html.Append(" <td class="auto - style5"><strong>29-Oct-2017</strong></td");
+            html.Append("</tr");
+            html.Append("< tr");
+            html.Append("< td class="auto - style3" colspan="2">Halady Road</td>");
+            html.Append(" <td class="auto - style5">Delivery Note</td>");
+            html.Append("<td class="auto - style5">Mode / Terms of payment</td>");
+            html.Append(" </tr>");
+            html.Append("< tr>");
+            html.Append(" < td class="auto - style3" colspan="2">Koteshwara</td>");
+            html.Append(" <td class="auto - style5">&nbsp;</td>");
+            html.Append(" <td class="auto - style5"><strong>0</strong></td>");
+            html.Append("</tr>");
+            html.Append(" < tr>");
+            html.Append(" < td class="auto - style3" colspan="2">GSTIN/UIN: <strong>29AAA65654654656AG</strong></td>");
+            html.Append("<td class="auto - style5">Suppliers Ref:</td>");
+            html.Append(" <td class="auto - style5">Other References</td>");
+            html.Append("</tr>");
+            html.Append(" < tr>");
+            html.Append("< td class="auto - style3" colspan="2">Email: <a href = "mailto: basukinath.hubbali@gmail.com" > basukinath.hubbali@gmail.com</a></td>");
+            html.Append("  <td class="auto - style5">&nbsp;</td>");
+            html.Append(" <td class="auto - style5">&nbsp;</td>");
+            html.Append(" </tr>");
+            html.Append("< tr>");
+            html.Append("< td class="auto - style3" colspan="2"><strong>Buyer</strong></td>");
+            html.Append(" <td class="auto - style5">Buyers Order No.</td>");
+            html.Append("<td class="auto - style5">Dated: 29-Oct-2017</td>");
+            html.Append("</tr>");
+            html.Append("< tr>");
+            html.Append(" < td class="auto - style6" colspan="2">SHREENIDHI ELECTRICALS</td>");
+            html.Append(" <td class="auto - style7">Dispatch Document No.</td>");
+            html.Append("  <td class="auto - style7">Delivery Note Date</td>");
+            html.Append(" </tr>");
+            html.Append(" < tr>");
+            html.Append(" < td class="auto - style6" colspan="2">NH-17</td>");
+            html.Append("<td class="auto - style7">&nbsp;</td>");
+            html.Append(" <td class="auto - style7">&nbsp;</td>");
+            html.Append(" </tr>");
+            html.Append("< tr>");
+            html.Append("< td class="auto - style6">State Name:&nbsp; </td>");
+            html.Append("<td class="auto - style6">Karnataka code:29</td>");
+            html.Append(" <td class="auto - style7">Dispatch through</td>");
+            html.Append(" <td class="auto - style7">Destination</td>");
+            html.Append("</tr>");
+            html.Append(" < tr>");
+            html.Append(" < td class="auto - style6">GSTIN/UIN No:</td>");
+            html.Append(" <td class="auto - style6">29AAAFFF</td>");
+            html.Append(" <td class="auto - style7">&nbsp;</td>");
+            html.Append("<td class="auto - style7">Kumta</td>");
+            html.Append("</tr>");
+            html.Append(" < tr>");
+            html.Append(" < td class="auto - style6">PAN/IT No:</td>");
+            html.Append(" <td class="auto - style6">AUR76767K</td>");
+            html.Append("  <td class="auto - style7">Bill of Landing/ RR No:</td>");
+            html.Append("<td class="auto - style7">Motor Vehicle No:</td>");
+            html.Append(" </tr>");
+            html.Append("< tr>");
+            html.Append(" < td class="auto - style6">Place of Supply:</td>");
+            html.Append(" <td class="auto - style6">Karnataka</td>");
+            html.Append(" <td class="auto - style7">&nbsp;</td>");
+            html.Append("<td class="auto - style7">&nbsp;</td>");
+            html.Append("</tr>");
+            html.Append(" < tr>");
+            html.Append(" < td class="auto - style6">&nbsp;</td>");
+            html.Append("<td class="auto - style6">&nbsp;</td>");
+            html.Append(" <td class="auto - style7">Terms of Delivery:</td>");
+            html.Append(" <td class="auto - style7">&nbsp;</td>");
+            html.Append("  </tr>");
+            html.Append(" < tr>");
+            html.Append(" < td class="auto - style6">&nbsp;</td>");
+            html.Append("<td class="auto - style6">&nbsp;</td>");
+            html.Append("<td class="auto - style7"><strong>F.O.R Destination</strong></td>");
+            html.Append("<td class="auto - style7">&nbsp;</td>");
+            html.Append("</tr>");
+            html.Append("< tr>");
+            html.Append("< td class="auto - style6"> </td>");
+            html.Append("<td class="auto - style6"></td>");
+            html.Append("<td class="auto - style6"></td>");
+            html.Append(" <td class="auto - style6"></td>");
+            html.Append(" </tr>");
+            html.Append(" </table>");
+
+            html.Append(" < table style = "border - style: solid; width: 100 %; " >");
+            html.Append("< tr >");
+            html.Append(" < td class="auto - style9">Sl.No.</td>");
+            html.Append("  <td class="auto - style13" style="vertical - align: text - top">Description of Goods</td>");
+            html.Append(" <td class="auto - style19">HSN/SAC</td>");
+            html.Append("<td class="auto - style18">GST");
+            html.Append(" <br />");
+            html.Append(" Rate </td>");
+            html.Append(" < td class="auto - style17">Quantity</td>");
+            html.Append("  <td class="auto - style20">Rate</td>");
+            html.Append(" <td class="auto - style22">per</td>");
+            html.Append(" <td class="auto - style17">Amount</td>");
+            html.Append("  </tr>");
+            html.Append("< tr>");
+            html.Append(" < td class="auto - style9">&nbsp;</td>
+                 html.Append("<td class="auto - style13" style="vertical - align: text - top">&nbsp;</td>");
+            html.Append(" <td class="auto - style11">&nbsp;</td>");
+            html.Append(" <td class="auto - style16">&nbsp;</td>");
+            html.Append("<td class="auto - style15">&nbsp;</td>");
+            html.Append("<td class="auto - style21">&nbsp;</td>");
+            html.Append("<td class="auto - style23">&nbsp;</td>");
+            html.Append("<td class="auto - style15">&nbsp;</td>");
+            html.Append(" </tr>");
+            html.Append(" </table>");
+
+            html.Append("</form>");
+            html.Append("</body>");
+            html.Append("</html>")");
+
+
+            return html.ToString();
         }
 
         private void SetInvoiceHead(Graphics g, System.Drawing.Printing.PrintPageEventArgs e)
@@ -487,6 +629,17 @@ namespace AC.Billing.UI.Transaction
             InvSubTitle4 = ConfigurationManager.AppSettings["GSTIN"].ToString();
             InvImage = Application.StartupPath + @"\Images\" + "InvPic.jpg";
         }
+
+        #region Print Invoice
+        private void CreatePrintLayout()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("");
+
+        }
+        #endregion
+
+
         private void prnDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             leftMargin = (int)e.MarginBounds.Left;
@@ -1250,8 +1403,18 @@ namespace AC.Billing.UI.Transaction
                 decimal outValue = 0;
                 Decimal.TryParse(sendingTB.Text, out outValue);
 
-                decimal QuantityRate = Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
-                decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+
+
+                decimal QuantityRate = 0;
+                decimal dicountPer = 0;
+                if (Quantity.Value!=System.DBNull.Value && Rate.Value!=System.DBNull.Value)
+                { 
+                QuantityRate= Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
+                }
+                if(discount.Value!=System.DBNull.Value)
+                { 
+              dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                }
                 discountAmt.Value = Convert.ToDecimal(dicountPer);
 
                 decimal totalafterDiscount = QuantityRate - dicountPer;
@@ -1286,13 +1449,21 @@ namespace AC.Billing.UI.Transaction
                 decimal outValue = 0;
                 Decimal.TryParse(sendingTB.Text, out outValue);
 
-                decimal QuantityRate = Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
+                decimal QuantityRate = 0;
+                if(Quantity.Value!=System.DBNull.Value && Rate.Value != System.DBNull.Value)
+                { 
+                QuantityRate= Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
+                }
                 decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(outValue);
                 discountAmt.Value = Convert.ToDecimal(dicountPer);
 
                 decimal totalafterDiscount = QuantityRate - dicountPer;
 
-                decimal totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                decimal totalTax = 0;
+                if(Tax.Value!=System.DBNull.Value)
+                { 
+                totalTax= totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                }
                 TaxAmount.Value = totalTax;
                 Total.Value = Convert.ToDecimal(totalafterDiscount + totalTax);
                 txtTotal.Text = "";
@@ -1320,13 +1491,26 @@ namespace AC.Billing.UI.Transaction
                 DataGridViewTextBoxCell Total = (DataGridViewTextBoxCell)dataGridView2.Rows[currentcell.Y].Cells[ConstTotal];
                 decimal outValue = 0;
                 Decimal.TryParse(sendingTB.Text, out outValue);
-                decimal QuantityRate= outValue * Convert.ToDecimal(Rate.Value);
-                decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+
+                decimal QuantityRate = 0;
+                if(Rate.Value !=System.DBNull.Value)
+                {
+                QuantityRate= outValue * Convert.ToDecimal(Rate.Value);
+                }
+                decimal dicountPer = 0;
+                if(discount.Value!=System.DBNull.Value)
+                { 
+                dicountPer= QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                }
                 discountAmt.Value= Convert.ToDecimal(dicountPer);
                                
                 decimal totalafterDiscount = QuantityRate - dicountPer;
 
-                decimal totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                decimal totalTax = 0;
+                if(Tax.Value !=System.DBNull.Value)
+                { 
+                totalTax= totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                }
                 TaxAmount.Value = totalTax;
                 Total.Value = Convert.ToDecimal(totalafterDiscount + totalTax);
                 txtTotal.Text = "";
@@ -1356,13 +1540,25 @@ namespace AC.Billing.UI.Transaction
                 decimal outValue = 0;
                 Decimal.TryParse(Rate.Text, out outValue);
 
-                decimal QuantityRate = Convert.ToDecimal(sendingTB.Value) * outValue;
-                decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                decimal QuantityRate = 0;
+                if(sendingTB.Value!=System.DBNull.Value)
+                { 
+                QuantityRate= Convert.ToDecimal(sendingTB.Value) * outValue;
+                }
+                decimal dicountPer = 0;
+                if (discount.Value != System.DBNull.Value)
+                {
+                    dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                }
                 discountAmt.Value = Convert.ToDecimal(dicountPer);
 
                 decimal totalafterDiscount = QuantityRate - dicountPer;
 
-                decimal totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                decimal totalTax = 0;
+                if (Tax.Value != System.DBNull.Value)
+                {
+                    totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                }
                 TaxAmount.Value = totalTax;
                 Total.Value = Convert.ToDecimal(totalafterDiscount + totalTax);
                 txtTotal.Text = "";
@@ -1560,7 +1756,7 @@ namespace AC.Billing.UI.Transaction
 
             return true;
         }
-        #endregion [Validation]
+        #endregion [Validation]s
 
     }
 }

@@ -126,6 +126,9 @@ namespace AC.Billing.UI
         {
             Inventory obj = new Inventory();
             obj.MdiParent = this;
+            obj.MaximizeBox = true;
+            obj.MinimizeBox = true;
+            //obj.Close = true;
             obj.Show();
         }
 
@@ -196,7 +199,9 @@ namespace AC.Billing.UI
 
             frmInventryReport obj = new frmInventryReport();
             obj.MdiParent = this;
+           
             obj.Show();
+            
         }
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
@@ -219,6 +224,18 @@ namespace AC.Billing.UI
             frmStockReport obj = new frmStockReport();
             obj.MdiParent = this;
             obj.Show();
+        }
+
+        private void modalWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 frm2 = new Form2();
+            //frm2.MdiParent = this;
+            frm2.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

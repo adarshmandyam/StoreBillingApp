@@ -30,6 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaxName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaxPercentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EffectiveFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtEffectiveDate = new System.Windows.Forms.DateTimePicker();
             this.txtDesc = new System.Windows.Forms.TextBox();
@@ -42,13 +49,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaxName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaxPercentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EffectiveFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,6 +82,63 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(665, 182);
             this.dataGridView1.TabIndex = 74;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "TaxID";
+            this.ID.HeaderText = "Tax ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // TaxName
+            // 
+            this.TaxName.DataPropertyName = "TaxName";
+            this.TaxName.HeaderText = "Tax Name";
+            this.TaxName.Name = "TaxName";
+            this.TaxName.Width = 150;
+            // 
+            // TaxPercentage
+            // 
+            this.TaxPercentage.DataPropertyName = "TaxPercentage";
+            this.TaxPercentage.FillWeight = 120F;
+            this.TaxPercentage.HeaderText = "Tax Percentage";
+            this.TaxPercentage.Name = "TaxPercentage";
+            this.TaxPercentage.Width = 110;
+            // 
+            // Description
+            // 
+            this.Description.DataPropertyName = "Description";
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.Width = 150;
+            // 
+            // EffectiveFrom
+            // 
+            this.EffectiveFrom.DataPropertyName = "EffectiveFrom";
+            this.EffectiveFrom.HeaderText = "Effective From";
+            this.EffectiveFrom.Name = "EffectiveFrom";
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Text = "Edit";
+            this.Edit.ToolTipText = "Edit";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 50;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.Text = "Delete";
+            this.Delete.ToolTipText = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 50;
             // 
             // panel1
             // 
@@ -202,70 +259,12 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "TaxID";
-            this.ID.HeaderText = "Tax ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // TaxName
-            // 
-            this.TaxName.DataPropertyName = "TaxName";
-            this.TaxName.HeaderText = "Tax Name";
-            this.TaxName.Name = "TaxName";
-            this.TaxName.Width = 150;
-            // 
-            // TaxPercentage
-            // 
-            this.TaxPercentage.DataPropertyName = "TaxPercentage";
-            this.TaxPercentage.FillWeight = 120F;
-            this.TaxPercentage.HeaderText = "Tax Percentage";
-            this.TaxPercentage.Name = "TaxPercentage";
-            this.TaxPercentage.Width = 110;
-            // 
-            // Description
-            // 
-            this.Description.DataPropertyName = "Description";
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.Width = 150;
-            // 
-            // EffectiveFrom
-            // 
-            this.EffectiveFrom.DataPropertyName = "EffectiveFrom";
-            this.EffectiveFrom.HeaderText = "Effective From";
-            this.EffectiveFrom.Name = "EffectiveFrom";
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Text = "Edit";
-            this.Edit.ToolTipText = "Edit";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 50;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Text = "Delete";
-            this.Delete.ToolTipText = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            this.Delete.Width = 50;
-            // 
             // frmTax
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);

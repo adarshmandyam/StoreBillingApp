@@ -620,6 +620,8 @@ namespace AC.Billing.UI.Transaction
                     dtInventoryItem = new DataTable();
                     dtInventoryItem = inventoryBLL.GetAllInventoryItem(InventoryID, 0);
                     dataGridView2.AutoGenerateColumns = false;
+
+                  //  dtInventoryItem.Columns.Add["NewRow"];
                     dataGridView2.DataSource = dtInventoryItem;
                     if (dtInventoryItem.Rows.Count > 0)
                     {
@@ -726,6 +728,8 @@ namespace AC.Billing.UI.Transaction
                 dtInventoryItems.Columns.Add("TotalAmount", typeof(Decimal));
                 dtInventoryItems.Columns.Add("Remark", typeof(String));
                 dtInventoryItems.Columns.Add("Delete", typeof(Boolean));
+                //Added 
+              //  dtInventoryItems.Columns.Add("IsNew", typeof(Boolean));
 
                 DataRow row;
                 for (int i = 0; i <dataGridView2.Rows.Count; i++)
@@ -790,6 +794,7 @@ namespace AC.Billing.UI.Transaction
                     DataGridViewCheckBoxCell ch1 = new DataGridViewCheckBoxCell();
                     ch1 = (DataGridViewCheckBoxCell)dataGridView2.Rows[i].Cells[0];
                     row["Delete"] = ch1.Value == null ? false : true;
+                  //  row["IsNew"] = true;
                     dtInventoryItems.Rows.Add(row);
                 }
 
@@ -845,6 +850,8 @@ namespace AC.Billing.UI.Transaction
                 dtItem.Columns.Add("TotalAmount", typeof(Decimal));
                 dtItem.Columns.Add("Remark", typeof(String));
                 dtItem.Columns.Add("Delete", typeof(Boolean));
+                dtItem.Columns.Add("IsNew", typeof(Boolean));
+
                 newRow = dtItem.NewRow();
                 dtItem.Rows.Add(newRow);
 
@@ -854,6 +861,7 @@ namespace AC.Billing.UI.Transaction
                 if (tdExistRows != null)
                 {
                     newRow = tdExistRows.NewRow();
+                    newRow["IsNew"] = true;
                     tdExistRows.Rows.Add(newRow);
                 }
                 else
@@ -1038,9 +1046,21 @@ namespace AC.Billing.UI.Transaction
                 decimal outValue = 0;
                 Decimal.TryParse(sendingTB.Text, out outValue);
 
-                decimal QuantityRate = Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
-                decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                decimal QuantityRate=0;
+                decimal dicountPer = 0;
+                
+                if (Quantity.Value!= System.DBNull.Value && Rate.Value!= System.DBNull.Value)
+                { 
+                 QuantityRate = Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
+                }
+                if(QuantityRate!=0 && discount.Value!=null)
+                { 
+                    dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                }
+                if(dicountPer!=0)
+                { 
                 discountAmt.Value = Convert.ToDecimal(dicountPer);
+                }
 
                 decimal totalafterDiscount = QuantityRate - dicountPer;
 
@@ -1074,7 +1094,13 @@ namespace AC.Billing.UI.Transaction
                 decimal outValue = 0;
                 Decimal.TryParse(sendingTB.Text, out outValue);
 
-                decimal QuantityRate = Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
+                decimal QuantityRate = 0;
+        
+                if (Quantity.Value!= System.DBNull.Value && Rate.Value!= System.DBNull.Value)
+                {
+                 QuantityRate = Convert.ToDecimal(Quantity.Value) * Convert.ToDecimal(Rate.Value);
+                }
+
                 decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(outValue);
                 discountAmt.Value = Convert.ToDecimal(dicountPer);
 
@@ -1107,14 +1133,26 @@ namespace AC.Billing.UI.Transaction
                 DataGridViewTextBoxCell TaxAmount = (DataGridViewTextBoxCell)dataGridView2.Rows[currentcell.Y].Cells[ConstTaxAmount];
                 DataGridViewTextBoxCell Total = (DataGridViewTextBoxCell)dataGridView2.Rows[currentcell.Y].Cells[ConstTotal];
                 decimal outValue = 0;
+                decimal QuantityRate=0;
+                decimal dicountPer = 0;
                 Decimal.TryParse(sendingTB.Text, out outValue);
-                decimal QuantityRate = outValue * Convert.ToDecimal(Rate.Value);
-                decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                if(Rate.Value!= System.DBNull.Value)
+                { 
+               QuantityRate = outValue * Convert.ToDecimal(Rate.Value);
+                }
+
+                if(discount.Value!=System.DBNull.Value)
+                { 
+                dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                }
                 discountAmt.Value = Convert.ToDecimal(dicountPer);
 
                 decimal totalafterDiscount = QuantityRate - dicountPer;
-
-                decimal totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                decimal totalTax = 0;
+                if (Tax.Value !=System.DBNull.Value)
+                {
+                    totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                }
                 TaxAmount.Value = totalTax;
                 Total.Value = Convert.ToDecimal(totalafterDiscount + totalTax);
                 txtTotal.Text = "";
@@ -1141,16 +1179,33 @@ namespace AC.Billing.UI.Transaction
                 DataGridViewTextBoxCell Tax = (DataGridViewTextBoxCell)dataGridView2.Rows[currentcell.Y].Cells[ConstTax];
                 DataGridViewTextBoxCell TaxAmount = (DataGridViewTextBoxCell)dataGridView2.Rows[currentcell.Y].Cells[ConstTaxAmount];
                 DataGridViewTextBoxCell Total = (DataGridViewTextBoxCell)dataGridView2.Rows[currentcell.Y].Cells[ConstTotal];
+                DataGridViewTextBoxCell quantity = (DataGridViewTextBoxCell)dataGridView2.Rows[currentcell.Y].Cells[ConstQuantity];
                 decimal outValue = 0;
                 Decimal.TryParse(Rate.Text, out outValue);
+                //   Decimal.TryParse(quantity.Text, out outValue);
 
-                decimal QuantityRate = Convert.ToDecimal(sendingTB.Value) * outValue;
-                decimal dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+
+                // decimal QuantityRate = Convert.ToDecimal(sendingTB.Value) * outValue;
+
+                decimal QuantityRate = 0;
+                decimal dicountPer = 0;
+                if (quantity.Value!=System.DBNull.Value)
+                { 
+                QuantityRate= Convert.ToDecimal(sendingTB.EditedFormattedValue) * (Decimal)quantity.Value;
+                }
+                if(discount.Value!=System.DBNull.Value)
+                {
+                 dicountPer = QuantityRate / 100 * Convert.ToDecimal(discount.Value);
+                }
                 discountAmt.Value = Convert.ToDecimal(dicountPer);
 
                 decimal totalafterDiscount = QuantityRate - dicountPer;
 
-                decimal totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                decimal totalTax = 0;
+                if(Tax.Value !=System.DBNull.Value)
+                { 
+                 totalTax = totalafterDiscount / 100 * Convert.ToDecimal(Tax.Value);
+                }
                 TaxAmount.Value = totalTax;
                 Total.Value = Convert.ToDecimal(totalafterDiscount + totalTax);
                 txtTotal.Text = "";

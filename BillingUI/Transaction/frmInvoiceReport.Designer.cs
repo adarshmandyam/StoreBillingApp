@@ -43,9 +43,9 @@ namespace AC.Billing.UI.Transaction
             this.DiscountAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnView = new System.Windows.Forms.Button();
             this.btnPrintPreview = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.btnView = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEndDate = new System.Windows.Forms.DateTimePicker();
             this.txtStartDate = new System.Windows.Forms.DateTimePicker();
@@ -164,33 +164,11 @@ namespace AC.Billing.UI.Transaction
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnPrintPreview);
-            this.panel2.Controls.Add(this.btnPrint);
             this.panel2.Controls.Add(this.btnView);
             this.panel2.Location = new System.Drawing.Point(28, 156);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1086, 53);
             this.panel2.TabIndex = 128;
-            // 
-            // btnPrintPreview
-            // 
-            this.btnPrintPreview.Location = new System.Drawing.Point(136, 16);
-            this.btnPrintPreview.Name = "btnPrintPreview";
-            this.btnPrintPreview.Size = new System.Drawing.Size(90, 23);
-            this.btnPrintPreview.TabIndex = 67;
-            this.btnPrintPreview.Text = "Print Preview";
-            this.btnPrintPreview.UseVisualStyleBackColor = true;
-            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(242, 16);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(75, 23);
-            this.btnPrint.TabIndex = 66;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnView
             // 
@@ -201,6 +179,26 @@ namespace AC.Billing.UI.Transaction
             this.btnView.Text = "View Report";
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // btnPrintPreview
+            // 
+            this.btnPrintPreview.Location = new System.Drawing.Point(893, 465);
+            this.btnPrintPreview.Name = "btnPrintPreview";
+            this.btnPrintPreview.Size = new System.Drawing.Size(90, 23);
+            this.btnPrintPreview.TabIndex = 67;
+            this.btnPrintPreview.Text = "Print Preview";
+            this.btnPrintPreview.UseVisualStyleBackColor = true;
+            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(1003, 465);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 66;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // groupBox1
             // 
@@ -256,7 +254,8 @@ namespace AC.Billing.UI.Transaction
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.btnPrintPreview);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

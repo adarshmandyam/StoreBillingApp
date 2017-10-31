@@ -68,18 +68,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.InvoiceID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Website = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsOnCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaytDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditParent = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.DeleteParent = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdBusiness = new System.Windows.Forms.RadioButton();
@@ -114,6 +102,18 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.InvoiceID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Website = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsOnCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaytDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditParent = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DeleteParent = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrintGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -142,9 +142,9 @@
             this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Location = new System.Drawing.Point(26, 221);
+            this.panel1.Location = new System.Drawing.Point(26, 206);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 177);
+            this.panel1.Size = new System.Drawing.Size(1088, 208);
             this.panel1.TabIndex = 129;
             // 
             // PrintGrid
@@ -169,12 +169,12 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(900, 181);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "Total";
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
             // 
             // dataGridView2
             // 
@@ -204,9 +204,9 @@
             this.TotalAmt,
             this.Remark,
             this.UnitID});
-            this.dataGridView2.Location = new System.Drawing.Point(24, 13);
+            this.dataGridView2.Location = new System.Drawing.Point(24, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1025, 155);
+            this.dataGridView2.Size = new System.Drawing.Size(1025, 175);
             this.dataGridView2.TabIndex = 10;
             this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
             this.dataGridView2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView2_EditingControlShowing);
@@ -261,10 +261,10 @@
             // Product
             // 
             this.Product.DataPropertyName = "ProductName";
-            this.Product.HeaderText = "Product";
+            this.Product.HeaderText = "Product Name";
             this.Product.Name = "Product";
             this.Product.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Product.Width = 75;
+            this.Product.Width = 175;
             // 
             // HSN_SAC
             // 
@@ -301,7 +301,7 @@
             this.Unit.HeaderText = "Unit";
             this.Unit.Name = "Unit";
             this.Unit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Unit.Width = 75;
+            this.Unit.Width = 50;
             // 
             // RateperUnit
             // 
@@ -314,9 +314,10 @@
             // Size
             // 
             this.Size.DataPropertyName = "SizeType";
-            this.Size.HeaderText = "Size Type";
+            this.Size.HeaderText = "Size";
             this.Size.Name = "Size";
             this.Size.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Size.Width = 50;
             // 
             // Tax
             // 
@@ -344,7 +345,7 @@
             this.Discount.HeaderText = "Discount";
             this.Discount.Name = "Discount";
             this.Discount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Discount.Width = 70;
+            this.Discount.Width = 60;
             // 
             // DiscountAmt
             // 
@@ -352,11 +353,11 @@
             dataGridViewCellStyle3.Format = "N2";
             dataGridViewCellStyle3.NullValue = "0";
             this.DiscountAmt.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DiscountAmt.HeaderText = "DiscountAmt";
+            this.DiscountAmt.HeaderText = "Disc. Amt";
             this.DiscountAmt.Name = "DiscountAmt";
             this.DiscountAmt.ReadOnly = true;
             this.DiscountAmt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DiscountAmt.Width = 85;
+            this.DiscountAmt.Width = 60;
             // 
             // TotalAmt
             // 
@@ -500,102 +501,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1034, 144);
             this.dataGridView1.TabIndex = 13;
             // 
-            // InvoiceID2
-            // 
-            this.InvoiceID2.DataPropertyName = "InvoiceID";
-            this.InvoiceID2.HeaderText = "InvoiceID";
-            this.InvoiceID2.Name = "InvoiceID2";
-            this.InvoiceID2.ReadOnly = true;
-            this.InvoiceID2.Visible = false;
-            // 
-            // Customer
-            // 
-            this.Customer.DataPropertyName = "CustomerName";
-            this.Customer.HeaderText = "Customer";
-            this.Customer.Name = "Customer";
-            this.Customer.ReadOnly = true;
-            // 
-            // ContactNumber
-            // 
-            this.ContactNumber.DataPropertyName = "ContactNumber";
-            this.ContactNumber.HeaderText = "Mobile Number";
-            this.ContactNumber.Name = "ContactNumber";
-            this.ContactNumber.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 110;
-            // 
-            // Website
-            // 
-            this.Website.DataPropertyName = "Website";
-            this.Website.HeaderText = "Website";
-            this.Website.Name = "Website";
-            this.Website.ReadOnly = true;
-            this.Website.Width = 110;
-            // 
-            // IsPaid
-            // 
-            this.IsPaid.DataPropertyName = "IsPaid";
-            this.IsPaid.HeaderText = "IsPaid";
-            this.IsPaid.Name = "IsPaid";
-            this.IsPaid.ReadOnly = true;
-            this.IsPaid.Width = 60;
-            // 
-            // IsOnCredit
-            // 
-            this.IsOnCredit.DataPropertyName = "IsOnCredit";
-            this.IsOnCredit.HeaderText = "IsOnCredit";
-            this.IsOnCredit.Name = "IsOnCredit";
-            this.IsOnCredit.ReadOnly = true;
-            // 
-            // InvoiceDate
-            // 
-            this.InvoiceDate.DataPropertyName = "InvoiceDate";
-            this.InvoiceDate.HeaderText = "Invoice Date";
-            this.InvoiceDate.Name = "InvoiceDate";
-            this.InvoiceDate.ReadOnly = true;
-            // 
-            // PaytDate
-            // 
-            this.PaytDate.DataPropertyName = "PaymentExpectedBy";
-            this.PaytDate.HeaderText = "Pay Date";
-            this.PaytDate.Name = "PaytDate";
-            this.PaytDate.ReadOnly = true;
-            // 
-            // Remarks
-            // 
-            this.Remarks.DataPropertyName = "Remarks";
-            this.Remarks.HeaderText = "Remarks";
-            this.Remarks.Name = "Remarks";
-            this.Remarks.ReadOnly = true;
-            // 
-            // EditParent
-            // 
-            this.EditParent.HeaderText = "Edit";
-            this.EditParent.Name = "EditParent";
-            this.EditParent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.EditParent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.EditParent.Text = "Edit";
-            this.EditParent.ToolTipText = "Edit";
-            this.EditParent.UseColumnTextForButtonValue = true;
-            this.EditParent.Width = 50;
-            // 
-            // DeleteParent
-            // 
-            this.DeleteParent.HeaderText = "Delete";
-            this.DeleteParent.Name = "DeleteParent";
-            this.DeleteParent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DeleteParent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.DeleteParent.Text = "Delete";
-            this.DeleteParent.ToolTipText = "Delete";
-            this.DeleteParent.UseColumnTextForButtonValue = true;
-            this.DeleteParent.Width = 50;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -632,7 +537,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(26, 45);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1088, 170);
+            this.groupBox1.Size = new System.Drawing.Size(1088, 155);
             this.groupBox1.TabIndex = 126;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Invoice";
@@ -730,7 +635,7 @@
             this.txtShippingAddress.Location = new System.Drawing.Point(373, 113);
             this.txtShippingAddress.Multiline = true;
             this.txtShippingAddress.Name = "txtShippingAddress";
-            this.txtShippingAddress.Size = new System.Drawing.Size(149, 52);
+            this.txtShippingAddress.Size = new System.Drawing.Size(149, 35);
             this.txtShippingAddress.TabIndex = 135;
             // 
             // label5
@@ -747,7 +652,7 @@
             this.txtBillingAddress.Location = new System.Drawing.Point(131, 113);
             this.txtBillingAddress.Multiline = true;
             this.txtBillingAddress.Name = "txtBillingAddress";
-            this.txtBillingAddress.Size = new System.Drawing.Size(133, 51);
+            this.txtBillingAddress.Size = new System.Drawing.Size(133, 35);
             this.txtBillingAddress.TabIndex = 133;
             // 
             // label2
@@ -854,15 +759,15 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(647, 144);
+            this.txtRemark.Location = new System.Drawing.Point(905, 114);
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(404, 20);
+            this.txtRemark.Size = new System.Drawing.Size(146, 20);
             this.txtRemark.TabIndex = 9;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(544, 147);
+            this.label14.Location = new System.Drawing.Point(810, 115);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 13);
             this.label14.TabIndex = 63;
@@ -936,13 +841,112 @@
             this.label24.TabIndex = 40;
             this.label24.Text = "Payment Mode :";
             // 
+            // InvoiceID2
+            // 
+            this.InvoiceID2.DataPropertyName = "InvoiceID";
+            this.InvoiceID2.HeaderText = "InvoiceID";
+            this.InvoiceID2.Name = "InvoiceID2";
+            this.InvoiceID2.ReadOnly = true;
+            this.InvoiceID2.Visible = false;
+            // 
+            // Customer
+            // 
+            this.Customer.DataPropertyName = "CustomerName";
+            this.Customer.HeaderText = "Customer Name";
+            this.Customer.Name = "Customer";
+            this.Customer.ReadOnly = true;
+            this.Customer.Width = 150;
+            // 
+            // ContactNumber
+            // 
+            this.ContactNumber.DataPropertyName = "ContactNumber";
+            this.ContactNumber.HeaderText = "Mobile No.";
+            this.ContactNumber.Name = "ContactNumber";
+            this.ContactNumber.ReadOnly = true;
+            this.ContactNumber.Width = 90;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 110;
+            // 
+            // Website
+            // 
+            this.Website.DataPropertyName = "Website";
+            this.Website.HeaderText = "Website";
+            this.Website.Name = "Website";
+            this.Website.ReadOnly = true;
+            this.Website.Width = 110;
+            // 
+            // IsPaid
+            // 
+            this.IsPaid.DataPropertyName = "IsPaid";
+            this.IsPaid.HeaderText = "IsPaid";
+            this.IsPaid.Name = "IsPaid";
+            this.IsPaid.ReadOnly = true;
+            this.IsPaid.Width = 60;
+            // 
+            // IsOnCredit
+            // 
+            this.IsOnCredit.DataPropertyName = "IsOnCredit";
+            this.IsOnCredit.HeaderText = "IsOnCredit";
+            this.IsOnCredit.Name = "IsOnCredit";
+            this.IsOnCredit.ReadOnly = true;
+            // 
+            // InvoiceDate
+            // 
+            this.InvoiceDate.DataPropertyName = "InvoiceDate";
+            this.InvoiceDate.HeaderText = "Invoice Date";
+            this.InvoiceDate.Name = "InvoiceDate";
+            this.InvoiceDate.ReadOnly = true;
+            this.InvoiceDate.Width = 80;
+            // 
+            // PaytDate
+            // 
+            this.PaytDate.DataPropertyName = "PaymentExpectedBy";
+            this.PaytDate.HeaderText = "Pay Date";
+            this.PaytDate.Name = "PaytDate";
+            this.PaytDate.ReadOnly = true;
+            this.PaytDate.Width = 80;
+            // 
+            // Remarks
+            // 
+            this.Remarks.DataPropertyName = "Remarks";
+            this.Remarks.HeaderText = "Remarks";
+            this.Remarks.Name = "Remarks";
+            this.Remarks.ReadOnly = true;
+            // 
+            // EditParent
+            // 
+            this.EditParent.HeaderText = "Edit";
+            this.EditParent.Name = "EditParent";
+            this.EditParent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.EditParent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.EditParent.Text = "Edit";
+            this.EditParent.ToolTipText = "Edit";
+            this.EditParent.UseColumnTextForButtonValue = true;
+            this.EditParent.Width = 50;
+            // 
+            // DeleteParent
+            // 
+            this.DeleteParent.HeaderText = "Delete";
+            this.DeleteParent.Name = "DeleteParent";
+            this.DeleteParent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DeleteParent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DeleteParent.Text = "Delete";
+            this.DeleteParent.ToolTipText = "Delete";
+            this.DeleteParent.UseColumnTextForButtonValue = true;
+            this.DeleteParent.Width = 50;
+            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -1017,18 +1021,8 @@
         private System.Windows.Forms.TextBox txtGSTIN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Website;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IsPaid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IsOnCredit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PaytDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
-        private System.Windows.Forms.DataGridViewButtonColumn EditParent;
-        private System.Windows.Forms.DataGridViewButtonColumn DeleteParent;
+        private System.Windows.Forms.DataGridView PrintGrid;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceItemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceId1;
@@ -1049,7 +1043,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitID;
-        private System.Windows.Forms.DataGridView PrintGrid;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Website;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsOnCredit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaytDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remarks;
+        private System.Windows.Forms.DataGridViewButtonColumn EditParent;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteParent;
     }
 }

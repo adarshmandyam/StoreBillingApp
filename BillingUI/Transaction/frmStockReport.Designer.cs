@@ -157,7 +157,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(136, 16);
+            this.button2.Location = new System.Drawing.Point(893, 460);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 23);
             this.button2.TabIndex = 3;
@@ -167,7 +167,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(242, 16);
+            this.button3.Location = new System.Drawing.Point(1001, 460);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
@@ -178,8 +178,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(28, 156);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1086, 53);
@@ -207,9 +205,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmStockReport";

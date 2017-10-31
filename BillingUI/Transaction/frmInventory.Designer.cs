@@ -28,35 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.PrintGrid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.IsDelete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.InventoryItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InventoryID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaxID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SizeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.HSN_SAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.RateperUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaxAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiscountAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -124,6 +104,26 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.IsDelete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.InventoryItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InventoryID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaxID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SizeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.HSN_SAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.RateperUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaxAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalAmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PrintGrid)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -162,9 +162,9 @@
             this.panel1.Controls.Add(this.PrintGrid);
             this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.lblTotal);
-            this.panel1.Location = new System.Drawing.Point(28, 235);
+            this.panel1.Location = new System.Drawing.Point(28, 219);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 161);
+            this.panel1.Size = new System.Drawing.Size(1088, 192);
             this.panel1.TabIndex = 15;
             // 
             // dataGridView2
@@ -197,199 +197,28 @@
             this.UnitID});
             this.dataGridView2.Location = new System.Drawing.Point(23, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1034, 145);
+            this.dataGridView2.Size = new System.Drawing.Size(1034, 158);
             this.dataGridView2.TabIndex = 40;
             this.dataGridView2.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView2_DataError);
             this.dataGridView2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView2_EditingControlShowing);
             // 
-            // IsDelete
-            // 
-            this.IsDelete.HeaderText = "Is Delete";
-            this.IsDelete.Name = "IsDelete";
-            this.IsDelete.Width = 60;
-            // 
-            // InventoryItemID
-            // 
-            this.InventoryItemID.DataPropertyName = "InventoryItemID";
-            this.InventoryItemID.HeaderText = "InventoryItemID";
-            this.InventoryItemID.Name = "InventoryItemID";
-            this.InventoryItemID.ToolTipText = "InventoryItemID";
-            this.InventoryItemID.Visible = false;
-            this.InventoryItemID.Width = 5;
-            // 
-            // InventoryID2
-            // 
-            this.InventoryID2.DataPropertyName = "InventoryID";
-            this.InventoryID2.HeaderText = "InventoryID";
-            this.InventoryID2.Name = "InventoryID2";
-            this.InventoryID2.Visible = false;
-            this.InventoryID2.Width = 5;
-            // 
-            // ProductID
-            // 
-            this.ProductID.DataPropertyName = "ProductID";
-            this.ProductID.HeaderText = "ProductID";
-            this.ProductID.Name = "ProductID";
-            this.ProductID.Visible = false;
-            this.ProductID.Width = 5;
-            // 
-            // TaxID
-            // 
-            this.TaxID.DataPropertyName = "TaxID";
-            this.TaxID.HeaderText = "TaxID";
-            this.TaxID.Name = "TaxID";
-            this.TaxID.Visible = false;
-            this.TaxID.Width = 5;
-            // 
-            // SizeID
-            // 
-            this.SizeID.DataPropertyName = "SizeID";
-            this.SizeID.HeaderText = "SizeID";
-            this.SizeID.Name = "SizeID";
-            this.SizeID.Visible = false;
-            this.SizeID.Width = 5;
-            // 
-            // Product
-            // 
-            this.Product.DataPropertyName = "ProductName";
-            this.Product.HeaderText = "Product";
-            this.Product.Name = "Product";
-            this.Product.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Product.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Product.Width = 75;
-            // 
-            // HSN_SAC
-            // 
-            this.HSN_SAC.DataPropertyName = "HSN_SAC";
-            this.HSN_SAC.HeaderText = "HSN/SAC";
-            this.HSN_SAC.Name = "HSN_SAC";
-            this.HSN_SAC.ReadOnly = true;
-            this.HSN_SAC.Width = 60;
-            // 
-            // Make
-            // 
-            this.Make.DataPropertyName = "Make";
-            this.Make.HeaderText = "Make";
-            this.Make.Name = "Make";
-            this.Make.ReadOnly = true;
-            this.Make.Width = 50;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 50;
-            // 
-            // Unit
-            // 
-            this.Unit.DataPropertyName = "Unit";
-            this.Unit.HeaderText = "Unit";
-            this.Unit.Name = "Unit";
-            this.Unit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Unit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Unit.Width = 75;
-            // 
-            // RateperUnit
-            // 
-            this.RateperUnit.DataPropertyName = "RatePerUnit";
-            this.RateperUnit.HeaderText = "Rate/Unit";
-            this.RateperUnit.Name = "RateperUnit";
-            this.RateperUnit.Width = 75;
-            // 
-            // Size
-            // 
-            this.Size.DataPropertyName = "SizeType";
-            this.Size.HeaderText = "Size Type";
-            this.Size.Name = "Size";
-            this.Size.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Tax
-            // 
-            this.Tax.DataPropertyName = "TaxPercentage";
-            this.Tax.HeaderText = "Tax";
-            this.Tax.Name = "Tax";
-            this.Tax.Width = 50;
-            // 
-            // TaxAmt
-            // 
-            this.TaxAmt.DataPropertyName = "TaxAmount";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.TaxAmt.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TaxAmt.HeaderText = "TaxAmt";
-            this.TaxAmt.Name = "TaxAmt";
-            this.TaxAmt.ReadOnly = true;
-            this.TaxAmt.Width = 60;
-            // 
-            // Discount
-            // 
-            this.Discount.DataPropertyName = "Discount";
-            this.Discount.HeaderText = "Discount";
-            this.Discount.Name = "Discount";
-            this.Discount.Width = 70;
-            // 
-            // DiscountAmt
-            // 
-            this.DiscountAmt.DataPropertyName = "DiscountAmount";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.DiscountAmt.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DiscountAmt.HeaderText = "DiscountAmt";
-            this.DiscountAmt.Name = "DiscountAmt";
-            this.DiscountAmt.ReadOnly = true;
-            this.DiscountAmt.Width = 85;
-            // 
-            // TotalAmt
-            // 
-            this.TotalAmt.DataPropertyName = "TotalAmount";
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.TotalAmt.DefaultCellStyle = dataGridViewCellStyle4;
-            this.TotalAmt.HeaderText = "TotalAmt";
-            this.TotalAmt.Name = "TotalAmt";
-            this.TotalAmt.ReadOnly = true;
-            this.TotalAmt.Width = 75;
-            // 
-            // Remark
-            // 
-            this.Remark.DataPropertyName = "Remark";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Remark.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Remark.HeaderText = "Remark";
-            this.Remark.Name = "Remark";
-            this.Remark.Width = 60;
-            // 
-            // UnitID
-            // 
-            this.UnitID.DataPropertyName = "UnitID";
-            this.UnitID.HeaderText = "UnitID";
-            this.UnitID.Name = "UnitID";
-            this.UnitID.Visible = false;
-            this.UnitID.Width = 5;
-            // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(935, 161);
+            this.txtTotal.Location = new System.Drawing.Point(935, 164);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.Size = new System.Drawing.Size(122, 20);
             this.txtTotal.TabIndex = 15;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(887, 164);
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(888, 167);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 14;
             this.lblTotal.Text = "Total";
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
             // 
             // panel2
             // 
@@ -687,7 +516,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(28, 40);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1088, 194);
+            this.groupBox1.Size = new System.Drawing.Size(1088, 173);
             this.groupBox1.TabIndex = 126;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inventory";
@@ -714,7 +543,7 @@
             this.txtShippingAddress.Location = new System.Drawing.Point(638, 126);
             this.txtShippingAddress.Multiline = true;
             this.txtShippingAddress.Name = "txtShippingAddress";
-            this.txtShippingAddress.Size = new System.Drawing.Size(149, 58);
+            this.txtShippingAddress.Size = new System.Drawing.Size(149, 39);
             this.txtShippingAddress.TabIndex = 149;
             // 
             // label6
@@ -737,10 +566,10 @@
             // 
             // txtBillingAddress
             // 
-            this.txtBillingAddress.Location = new System.Drawing.Point(387, 127);
+            this.txtBillingAddress.Location = new System.Drawing.Point(387, 124);
             this.txtBillingAddress.Multiline = true;
             this.txtBillingAddress.Name = "txtBillingAddress";
-            this.txtBillingAddress.Size = new System.Drawing.Size(133, 57);
+            this.txtBillingAddress.Size = new System.Drawing.Size(133, 41);
             this.txtBillingAddress.TabIndex = 147;
             // 
             // label3
@@ -754,15 +583,15 @@
             // 
             // txtGSTIN
             // 
-            this.txtGSTIN.Location = new System.Drawing.Point(143, 154);
+            this.txtGSTIN.Location = new System.Drawing.Point(387, 16);
             this.txtGSTIN.Name = "txtGSTIN";
-            this.txtGSTIN.Size = new System.Drawing.Size(118, 20);
+            this.txtGSTIN.Size = new System.Drawing.Size(133, 20);
             this.txtGSTIN.TabIndex = 145;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(39, 161);
+            this.label8.Location = new System.Drawing.Point(289, 19);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 144;
@@ -886,16 +715,16 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(892, 154);
+            this.txtRemark.Location = new System.Drawing.Point(638, 16);
             this.txtRemark.MaxLength = 500;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(145, 20);
+            this.txtRemark.Size = new System.Drawing.Size(399, 20);
             this.txtRemark.TabIndex = 14;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(807, 161);
+            this.label14.Location = new System.Drawing.Point(544, 16);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 13);
             this.label14.TabIndex = 63;
@@ -1024,13 +853,184 @@
             this.label24.TabIndex = 40;
             this.label24.Text = "Payment Mode :";
             // 
+            // IsDelete
+            // 
+            this.IsDelete.HeaderText = "Is Delete";
+            this.IsDelete.Name = "IsDelete";
+            this.IsDelete.Width = 60;
+            // 
+            // InventoryItemID
+            // 
+            this.InventoryItemID.DataPropertyName = "InventoryItemID";
+            this.InventoryItemID.HeaderText = "InventoryItemID";
+            this.InventoryItemID.Name = "InventoryItemID";
+            this.InventoryItemID.ToolTipText = "InventoryItemID";
+            this.InventoryItemID.Visible = false;
+            this.InventoryItemID.Width = 5;
+            // 
+            // InventoryID2
+            // 
+            this.InventoryID2.DataPropertyName = "InventoryID";
+            this.InventoryID2.HeaderText = "InventoryID";
+            this.InventoryID2.Name = "InventoryID2";
+            this.InventoryID2.Visible = false;
+            this.InventoryID2.Width = 5;
+            // 
+            // ProductID
+            // 
+            this.ProductID.DataPropertyName = "ProductID";
+            this.ProductID.HeaderText = "ProductID";
+            this.ProductID.Name = "ProductID";
+            this.ProductID.Visible = false;
+            this.ProductID.Width = 5;
+            // 
+            // TaxID
+            // 
+            this.TaxID.DataPropertyName = "TaxID";
+            this.TaxID.HeaderText = "TaxID";
+            this.TaxID.Name = "TaxID";
+            this.TaxID.Visible = false;
+            this.TaxID.Width = 5;
+            // 
+            // SizeID
+            // 
+            this.SizeID.DataPropertyName = "SizeID";
+            this.SizeID.HeaderText = "SizeID";
+            this.SizeID.Name = "SizeID";
+            this.SizeID.Visible = false;
+            this.SizeID.Width = 5;
+            // 
+            // Product
+            // 
+            this.Product.DataPropertyName = "ProductName";
+            this.Product.HeaderText = "Product";
+            this.Product.Name = "Product";
+            this.Product.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Product.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Product.Width = 175;
+            // 
+            // HSN_SAC
+            // 
+            this.HSN_SAC.DataPropertyName = "HSN_SAC";
+            this.HSN_SAC.HeaderText = "HSN/SAC";
+            this.HSN_SAC.Name = "HSN_SAC";
+            this.HSN_SAC.ReadOnly = true;
+            this.HSN_SAC.Width = 60;
+            // 
+            // Make
+            // 
+            this.Make.DataPropertyName = "Make";
+            this.Make.HeaderText = "Make";
+            this.Make.Name = "Make";
+            this.Make.ReadOnly = true;
+            this.Make.Width = 50;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.Quantity.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 50;
+            // 
+            // Unit
+            // 
+            this.Unit.DataPropertyName = "Unit";
+            this.Unit.HeaderText = "Unit";
+            this.Unit.Name = "Unit";
+            this.Unit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Unit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Unit.Width = 40;
+            // 
+            // RateperUnit
+            // 
+            this.RateperUnit.DataPropertyName = "RatePerUnit";
+            this.RateperUnit.HeaderText = "Rate/Unit";
+            this.RateperUnit.Name = "RateperUnit";
+            this.RateperUnit.Width = 75;
+            // 
+            // Size
+            // 
+            this.Size.DataPropertyName = "SizeType";
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            this.Size.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Size.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Size.Width = 40;
+            // 
+            // Tax
+            // 
+            this.Tax.DataPropertyName = "TaxPercentage";
+            this.Tax.HeaderText = "Tax";
+            this.Tax.Name = "Tax";
+            this.Tax.Width = 40;
+            // 
+            // TaxAmt
+            // 
+            this.TaxAmt.DataPropertyName = "TaxAmount";
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.TaxAmt.DefaultCellStyle = dataGridViewCellStyle7;
+            this.TaxAmt.HeaderText = "Tax Amt";
+            this.TaxAmt.Name = "TaxAmt";
+            this.TaxAmt.ReadOnly = true;
+            this.TaxAmt.Width = 70;
+            // 
+            // Discount
+            // 
+            this.Discount.DataPropertyName = "Discount";
+            this.Discount.HeaderText = "Discount";
+            this.Discount.Name = "Discount";
+            this.Discount.Width = 50;
+            // 
+            // DiscountAmt
+            // 
+            this.DiscountAmt.DataPropertyName = "DiscountAmount";
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.DiscountAmt.DefaultCellStyle = dataGridViewCellStyle8;
+            this.DiscountAmt.HeaderText = "Disc.Amt";
+            this.DiscountAmt.Name = "DiscountAmt";
+            this.DiscountAmt.ReadOnly = true;
+            this.DiscountAmt.Width = 60;
+            // 
+            // TotalAmt
+            // 
+            this.TotalAmt.DataPropertyName = "TotalAmount";
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = "0";
+            this.TotalAmt.DefaultCellStyle = dataGridViewCellStyle9;
+            this.TotalAmt.HeaderText = "TotalAmt";
+            this.TotalAmt.Name = "TotalAmt";
+            this.TotalAmt.ReadOnly = true;
+            this.TotalAmt.Width = 75;
+            // 
+            // Remark
+            // 
+            this.Remark.DataPropertyName = "Remark";
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.Remark.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Remark.HeaderText = "Remark";
+            this.Remark.Name = "Remark";
+            this.Remark.Width = 60;
+            // 
+            // UnitID
+            // 
+            this.UnitID.DataPropertyName = "UnitID";
+            this.UnitID.HeaderText = "UnitID";
+            this.UnitID.Name = "UnitID";
+            this.UnitID.Visible = false;
+            this.UnitID.Width = 5;
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(1144, 632);
-            this.ControlBox = false;
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -1038,7 +1038,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Inventory";
             this.Text = "Inventory";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PrintGrid)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -1123,6 +1122,10 @@
         private System.Windows.Forms.TextBox txtBillingAddress;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView PrintGrid;
+        private System.Windows.Forms.TextBox txtInvoiceNo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryItemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn InventoryID2;
@@ -1143,9 +1146,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalAmt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitID;
-        private System.Windows.Forms.DataGridView PrintGrid;
-        private System.Windows.Forms.TextBox txtInvoiceNo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label12;
     }
 }

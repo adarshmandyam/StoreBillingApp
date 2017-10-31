@@ -20,6 +20,17 @@ namespace AC.Billing.Business
             return userDAL.GetUserDetails(username, password);
         }
 
+        /// <summary>
+        /// UpdatePassword
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="newPassword"></param>
+        /// <returns></returns>
+        public int UpdatePassword(string userName, string newPassword)  //string oldPassword, 
+        {
+            return userDAL.UpdatePassword(userName, newPassword);
+        }
+
         public override void Dispose()
         {
             userDAL.Dispose();

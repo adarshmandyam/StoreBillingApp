@@ -424,6 +424,11 @@ namespace AC.Billing.UI.Transaction
 
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            FillGrid();
+        }
+
         public void onlynumber(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
