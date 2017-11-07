@@ -1840,7 +1840,6 @@ namespace AC.Billing.UI.Transaction
 
         void Print(string str)
         {
-
             //var htmlLoadOptions = LoadOptions.None;
             //using (var htmlStream = new MemoryStream(htmlLoadOptions.Encoding.GetBytes(str)))
             //DocumentModel.Load(htmlStream, htmlLoadOptions).Print();
