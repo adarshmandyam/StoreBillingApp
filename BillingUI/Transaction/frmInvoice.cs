@@ -29,8 +29,8 @@ namespace AC.Billing.UI.Transaction
         int iRow = 0;//Used as counter
         bool bFirstPage = false; //Used to check whether we are printing first page
         bool bNewPage = false;// Used to check whether we are printing a new page
-        int iHeaderHeight = 0; //Used for the header height
-        StringBuilder html;
+        int iHeaderHeight = 0; //Used for the header height        
+        string sGSTFlag = ConfigurationManager.AppSettings["WithoutGSTPrintFlag"].ToString();
         WebBrowser wb;
 
         //read config values
@@ -213,23 +213,23 @@ namespace AC.Billing.UI.Transaction
             html.Append(Environment.NewLine);
             html.Append(".auto-style11 { border:1px solid black;width:12px;height:23px;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
-            html.Append(".auto-style13 { border:1px solid black;width:362px;height:23px;text-align:center;word-wrap: break-word; }");
+            html.Append(".auto-style13 { border:1px solid black;width:362px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
             html.Append(".auto-style15 { border:1px solid black;height:23px;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
             html.Append(".auto-style16 { border:1px solid black;width:55px;height:23px;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
-            html.Append(".auto-style17 { border:1px solid black;height:23px;text-align:center;word-wrap:break-word; }");
+            html.Append(".auto-style17 { border:1px solid black;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
-            html.Append(".auto-style18 { border:1px solid black;width:55px;height:23px;text-align:center;word-wrap:break-word; }");
+            html.Append(".auto-style18 { border:1px solid black;width:55px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
-            html.Append(".auto-style19 { border:1px solid black;width:12px;height:23px;text-align:center;word-wrap:break-word; }");
+            html.Append(".auto-style19 { border:1px solid black;width:12px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
-            html.Append(".auto-style20 { border:1px solid black;width:95px;height:23px;text-align:center;word-wrap:break-word; }");
+            html.Append(".auto-style20 { border:1px solid black;width:95px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
             html.Append(".auto-style21 { border:1px solid black;width:95px;height:23px;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
-            html.Append(".auto-style22 { border:1px solid black;width:44px;height:23px;text-align:center;word-wrap:break-word; }");
+            html.Append(".auto-style22 { border:1px solid black;width:44px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
             html.Append(".auto-style23 { border:1px solid black;width:44px;height:23px;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
@@ -241,230 +241,361 @@ namespace AC.Billing.UI.Transaction
             html.Append("\"width:100%;border-left:solid;border-top:solid;border-bottom:solid;border-right:solid;\"");
             html.Append(">");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">");
             html.Append("<strong>" + companyName.ToUpper() + "</strong>");  //CustomerName SUNRISE MARKETING AGENTS
             html.Append("</td>");
-            html.Append("<td class=\"auto - style5\">Invoice No.</td>");
-            html.Append("<td class=\"auto - style5\">Dated</td>");
+            html.Append("<td class=\"auto-style5\">Invoice No.</td>");
+            html.Append("<td class=\"auto-style5\">Dated</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">");
             html.Append(address1);  //CustomerName  "Laxmi - Govind"
             html.Append("</td>");
-            html.Append("<td class=\"auto - style5\"><strong>");
+            html.Append("<td class=\"auto-style5\"><strong>");
             html.Append(InvoiceNo); 
             html.Append("</strong></td>");
-            html.Append("<td class=\"auto - style5\"><strong>");
+            html.Append("<td class=\"auto-style5\"><strong>");
             html.Append(InvoicePrintDate);
             html.Append("</strong></td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">");
             html.Append(address2);  //BillingAddress  "Halady Road"
             html.Append("</td>");
-            html.Append("<td class=\"auto - style5\">Delivery Note</td>");
-            html.Append("<td class=\"auto - style5\">Mode / Terms of payment</td>");
+            html.Append("<td class=\"auto-style5\">Delivery Note</td>");
+            html.Append("<td class=\"auto-style5\">Mode / Terms of payment</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">");
             html.Append(address2);  //Koteshwara
             html.Append("</td>");
-            html.Append("<td class=\"auto - style5\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style5\"><strong>0</strong></td>");
+            html.Append("<td class=\"auto-style5\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style5\"><strong>0</strong></td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">GSTIN/UIN: <strong>");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">GSTIN/UIN: <strong>");
             html.Append(GSTIN);
             html.Append("</strong></td>"); //29AAA65654654656AG
-            html.Append("<td class=\"auto - style5\">Suppliers Ref:</td>");
-            html.Append("<td class=\"auto - style5\">Other References</td>");
+            html.Append("<td class=\"auto-style5\">Suppliers Ref:</td>");
+            html.Append("<td class=\"auto-style5\">Other References</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">Email: <a href = \"mailto:" + email + "\">" + email + "</a></td>"); //smagents99@gmail.com
-            html.Append("<td class=\"auto - style5\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style5\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">Email: <a href = \"mailto:" + email + "\">" + email + "</a></td>"); //smagents99@gmail.com
+            html.Append("<td class=\"auto-style5\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style5\">&nbsp;</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\"><strong>Buyer</strong></td>");
-            html.Append("<td class=\"auto - style5\">Buyers Order No.</td>");
-            html.Append("<td class=\"auto - style5\">Dated</td>");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\"><strong>Buyer</strong></td>");
+            html.Append("<td class=\"auto-style5\">Buyers Order No.</td>");
+            html.Append("<td class=\"auto-style5\">Dated</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style6\" colspan=\"2\">");
             html.Append("<strong>" + CustomerName + "</strong></td>");
-            html.Append("<td class=\"auto - style7\">Dispatch Document No.</td>");
-            html.Append("<td class=\"auto - style7\">Delivery Note Date</td>");
+            html.Append("<td class=\"auto-style7\">Dispatch Document No.</td>");
+            html.Append("<td class=\"auto-style7\">Delivery Note Date</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style6\" colspan=\"2\">");
             html.Append(BillingAddress + "</td>");
-            html.Append("<td class=\"auto - style7\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style7\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style7\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style7\">&nbsp;</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\">State Name:&nbsp; </td>");
-            html.Append("<td  class=\"auto - style6\">Karnataka code:29</td>");
-            html.Append("<td class=\"auto - style7\">Dispatch through</td>");
-            html.Append("<td class=\"auto - style7\">Destination</td>");
+            html.Append("<td class=\"auto-style6\">State Name:&nbsp; </td>");
+            html.Append("<td  class=\"auto-style6\">Karnataka code:29</td>");
+            html.Append("<td class=\"auto-style7\">Dispatch through</td>");
+            html.Append("<td class=\"auto-style7\">Destination</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\">GSTIN/UIN No:</td>");
-            html.Append("<td class=\"auto - style6\">" + GSTIN + "</td>");  //29AAAFFF
-            html.Append("<td class=\"auto - style7\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style7\">" + destination + "</td>");  //Kumta
+            html.Append("<td class=\"auto-style6\">GSTIN/UIN No:</td>");
+            html.Append("<td class=\"auto-style6\">" + GSTIN + "</td>");  //29AAAFFF
+            html.Append("<td class=\"auto-style7\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style7\">" + destination + "</td>");  //Kumta
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\">PAN/IT No:</td>");
-            html.Append("<td class=\"auto - style6\">" + panNumber + "</td>");  //AUR76767K
-            html.Append("<td class=\"auto - style7\">Bill of Landing / RR No:</td>");
-            html.Append("<td class=\"auto - style7\">Motor Vehicle No:</td>");
+            html.Append("<td class=\"auto-style6\">PAN/IT No:</td>");
+            html.Append("<td class=\"auto-style6\">" + panNumber + "</td>");  //AUR76767K
+            html.Append("<td class=\"auto-style7\">Bill of Landing / RR No:</td>");
+            html.Append("<td class=\"auto-style7\">Motor Vehicle No:</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\">Place of Supply:</td>");
-            html.Append("<td class=\"auto - style6\">" + state + "</td>");  //Karnataka
-            html.Append("<td class=\"auto - style7\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style7\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style6\">Place of Supply:</td>");
+            html.Append("<td class=\"auto-style6\">" + state + "</td>");  //Karnataka
+            html.Append("<td class=\"auto-style7\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style7\">&nbsp;</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style6\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style7\">Terms of Delivery:</td>");
-            html.Append("<td class=\"auto - style7\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style6\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style6\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style7\">Terms of Delivery:</td>");
+            html.Append("<td class=\"auto-style7\">&nbsp;</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style6\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style7\"><strong>F.O.R Destination</strong></td>");
-            html.Append("<td class=\"auto - style7\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style6\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style6\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style7\"><strong>F.O.R Destination</strong></td>");
+            html.Append("<td class=\"auto-style7\">&nbsp;</td>");
             html.Append("</tr>");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style6\"> </td>");
-            html.Append("<td class=\"auto - style6\"></td>");
-            html.Append("<td class=\"auto - style6\"></td>");
-            html.Append("<td class=\"auto - style6\"></td>");
+            html.Append("<td class=\"auto-style6\"> </td>");
+            html.Append("<td class=\"auto-style6\"></td>");
+            html.Append("<td class=\"auto-style6\"></td>");
+            html.Append("<td class=\"auto-style6\"></td>");
             html.Append("</tr>");
             html.Append("</table>");
 
-            html.Append("<table style =");
-            html.Append("\"width: 100 %;border-left:solid;border-top:solid;border-bottom:solid;border-right:solid;\"");
-            html.Append("<tr >");
-            html.Append("<td class=\"auto - style9\">Sl.No.</td>");
-            html.Append("<td class=\"auto - style13\" style=\"vertical - align: text - top\">Description of Goods</td>");
-            html.Append("<td class=\"auto - style19\">HSN/SAC</td>");
-            html.Append("<td class=\"auto - style18\">GST");
-            html.Append("<br />");
-            html.Append("Rate </td>");
-            html.Append("<td class=\"auto - style17\">Quantity</td>");
-            html.Append("<td class=\"auto - style20\">Rate</td>");
-            html.Append("<td class=\"auto - style22\">per</td>");
-            html.Append("<td class=\"auto - style17\">Amount</td>");
-            html.Append("</tr>");
-            html.Append("<tr>");
-            html.Append("<td class=\"auto - style9\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style13\" style=\"vertical - align: text - top\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style11\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style16\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style15\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style21\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style23\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style15\">&nbsp;</td>");
-            html.Append("</tr>");
+            //if GST is not needed to be shown
+            if ((rbWithoutGST.Checked == true))  //  || (sGSTFlag == "1") reading from config file
+            {
+                html.Append("<table style =");
+                html.Append("\"width: 100 %;border-left:solid;border-top:solid;border-bottom:solid;border-right:solid;\"");
+                html.Append("<tr>");
+                html.Append("<td class=\"auto-style9\">Sl.No.</td>");
+                html.Append("<td class=\"auto-style13\" style=\"vertical-align:middle\">Description of Goods</td>");
+                html.Append("<td class=\"auto-style18\">HSN/SAC</td>");
+                //html.Append("<td class=\"auto-style18\">");  //GST
+                //html.Append("<br />");
+                //html.Append("</td>"); //Rate 
+                html.Append("<td class=\"auto-style17\">Quantity</td>");
+                html.Append("<td class=\"auto-style20\">Rate</td>");
+                //html.Append("<td class=\"auto - style22\"></td>");  //per
+                html.Append("<td class=\"auto-style17\">Amount</td>");
+                html.Append("</tr>");
+
+                //html.Append("<tr>");
+                //html.Append("<td class=\"auto-style9\"></td>");
+                //html.Append("<td class=\"auto-style13\" style=\"vertical - align: text - top\"></td>");
+                //html.Append("<td class=\"auto-style18\"></td>");
+                ////html.Append("<td class=\"auto-style18\">");  //GST
+                ////html.Append("<br />");
+                ////html.Append("</td>"); //Rate 
+                //html.Append("<td class=\"auto - style17\"></td>");
+                //html.Append("<td class=\"auto - style20\"></td>");
+                ////html.Append("<td class=\"auto - style22\"></td>");  //per
+                //html.Append("<td class=\"auto - style17\"></td>");
+                //html.Append("</tr>");
+            }
+            else
+            {
+                html.Append("<table style =");
+                html.Append("\"width: 100 %;border-left:solid;border-top:solid;border-bottom:solid;border-right:solid;\"");
+                html.Append("<tr >");
+                html.Append("<td class=\"auto-style9\">Sl.No.</td>");
+                html.Append("<td class=\"auto-style13\" style=\"vertical-align:middle\">Description of Goods</td>");
+                html.Append("<td class=\"auto-style19\">HSN/SAC</td>");                
+                html.Append("<td class=\"auto-style17\">Quantity</td>");
+                html.Append("<td class=\"auto-style20\">Rate</td>");
+                //html.Append("<td class=\"auto-style22\">per</td>");
+                html.Append("<td class=\"auto-style18\">GST");
+                html.Append("<br />");
+                html.Append("Rate </td>");
+                //html.Append("<td class=\"auto-style18\">SGST");
+                //html.Append("<br />");
+                //html.Append("Rate </td>");
+                html.Append("<td class=\"auto-style17\">Amount</td>");
+                html.Append("</tr>");
+
+                //html.Append("<tr>");
+                //html.Append("<td class=\"auto-style9\">&nbsp;</td>");
+                //html.Append("<td class=\"auto-style13\" style=\"vertical-align:text-top\">&nbsp;</td>");
+                //html.Append("<td class=\"auto-style11\">&nbsp;</td>");
+                //html.Append("<td class=\"auto-style16\">&nbsp;</td>");
+                //html.Append("<td class=\"auto-style15\">&nbsp;</td>");
+                //html.Append("<td class=\"auto-style21\">&nbsp;</td>");
+                //html.Append("<td class=\"auto-style23\">&nbsp;</td>");
+                //html.Append("<td class=\"auto-style15\">&nbsp;</td>");
+                //html.Append("</tr>");
+            }
+                
 
             // Add Looping TRs
             int counter = 1;
+            int counter2 = 0;
             //double Total = 0;
-            foreach(DataRow dr in dt.Rows)
+
+            if ((rbWithoutGST.Checked == true))  // || (sGSTFlag == "1")
             {
-                html.Append("<tr>");
-                html.Append("<td border: 1px solid black;>");
-                if(dr[0]!=System.DBNull.Value & dr[0].ToString() !=String.Empty)
-                html.Append(counter.ToString());
-                html.Append("</td>");
-                
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[0].ToString());
-                html.Append("</td>");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    html.Append("<tr>");
+                    if (dr[0] != System.DBNull.Value & dr[0].ToString() != String.Empty)
+                    {
+                        html.Append("<td class=\"auto-style9\">");                    
+                        html.Append(counter.ToString());
+                        html.Append("</td>");
 
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[1].ToString());
-                html.Append("</td>");
+                        html.Append("<td class=\"auto-style13\" style=\"text-align:left;\">");
+                        html.Append(dr[0].ToString());
+                        html.Append("</td>");
 
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[2].ToString());
-                html.Append("</td>");
+                        html.Append("<td class=\"auto-style18\">");
+                        html.Append(dr[1].ToString());
+                        html.Append("</td>");
 
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[3].ToString());
-                html.Append("</td>");
+                        html.Append("<td class=\"auto-style17\">");
+                        html.Append(dr[2].ToString());
+                        html.Append("</td>");
 
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[4].ToString());
-                html.Append("</td>");
+                        if (!String.IsNullOrEmpty(dr[3].ToString()) && !String.IsNullOrEmpty(dr[5].ToString()) && !String.IsNullOrEmpty(dr[6].ToString()))
+                        {
+                            double rate = Convert.ToDouble(dr[3].ToString());
+                            double cgstAmount = Convert.ToDouble(dr[5].ToString());
+                            double sgstAmount = Convert.ToDouble(dr[6].ToString());
+                            double ratePlusTax = rate + cgstAmount + sgstAmount;
+                            html.Append("<td class=\"auto-style20\">");
+                            html.Append(ratePlusTax.ToString());   //dr[3].ToString()
+                            html.Append("</td>");
+                        }
 
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[5].ToString());
-                html.Append("</td>");
+                        html.Append("<td class=\"auto-style17\">");
+                        html.Append(dr[7].ToString());
+                        html.Append("</td>");
+                    }
+                    else
+                    {
+                        if ((dr[6].ToString().Contains("CGST") || dr[6].ToString().Contains("SGST") || dr[6].ToString().Contains("Total Tax") || dr[6].ToString().Contains("Total Excl GST")))
+                        {
+                            //html.Append("<td border: 1px solid black;>");
+                            //html.Append(dr[6].ToString());
+                            //html.Append("</td>");
 
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[6].ToString());
-                html.Append("</td>");
+                            //html.Append("<td border: 1px solid black;>");
+                            //html.Append(dr[7].ToString());
+                            //html.Append("</td>");
+                        }
+                        else if ((dr[6].ToString().Contains("Total Amount")))
+                        {
+                            html.Append("<td style=\"border:1px solid black;text-align:left;\" colspan=\"5\">");
+                            html.Append("Total Amount");
+                            html.Append("</td>");
 
-                html.Append("<td border: 1px solid black;>");
-                html.Append(dr[7].ToString());
-                html.Append("</td>");
+                            html.Append("<td class=\"auto-style17\">");
+                            html.Append(dr[7].ToString());
+                            html.Append("</td>");
+                        }
+                    }                    
 
-                //if (dr[7] !=System.DBNull.Value)
-                //    Total = Total + Convert.ToDouble(dr[7]);
+                    //html.Append("<td border: 1px solid black;>");
+                    //html.Append(dr[4].ToString());
+                    //html.Append("</td>");
 
-                html.Append("</tr>");
+                    //html.Append("<td border: 1px solid black;>");
+                    //html.Append(dr[5].ToString());
+                    //html.Append("</td>");
 
-                counter++;
+                   
+
+                    //if (dr[7] !=System.DBNull.Value)
+                    //    Total = Total + Convert.ToDouble(dr[7]);
+
+                    html.Append("</tr>");
+
+                    counter++;
+                }
+            }
+            else
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    html.Append("<tr>");
+                    if (dr[0] != System.DBNull.Value & dr[0].ToString() != String.Empty)
+                    {
+                        html.Append("<td class=\"auto-style9\">");                    
+                        html.Append(counter.ToString());
+                        html.Append("</td>");
+
+                        html.Append("<td class=\"auto-style13\" style=\"text-align:left;\">");
+                        html.Append(dr[0].ToString());
+                        html.Append("</td>");
+
+                        html.Append("<td class=\"auto-style19\">");
+                        html.Append(dr[1].ToString());
+                        html.Append("</td>");
+
+                        html.Append("<td class=\"auto-style18\">");
+                        html.Append(dr[2].ToString());
+                        html.Append("</td>");
+
+                        html.Append("<td class=\"auto-style17\">");
+                        html.Append(dr[3].ToString());
+                        html.Append("</td>");
+
+                        if (!String.IsNullOrEmpty(dr[5].ToString()) && !String.IsNullOrEmpty(dr[6].ToString()))
+                        {
+                            double cgstAmount = Convert.ToDouble(dr[5].ToString());
+                            double sgstAmount = Convert.ToDouble(dr[6].ToString());
+                            double ratePlusTax = cgstAmount + sgstAmount;
+                            html.Append("<td class=\"auto-style22\">");
+                            html.Append(ratePlusTax.ToString());   //dr[3].ToString()
+                            html.Append("</td>");
+                        }
+                    }
+                    else
+                    {
+                        html.Append("<td style=\"border:1px solid black;text-align:right;\" colspan=\"6\">");
+                        html.Append(dr[6].ToString());
+                        html.Append("</td>");
+                    }
+
+                    html.Append("<td class=\"auto-style15\">");
+                    html.Append(dr[7].ToString());
+                    html.Append("</td>");
+
+                    //if (dr[7] !=System.DBNull.Value)
+                    //    Total = Total + Convert.ToDouble(dr[7]);
+
+                    html.Append("</tr>");
+
+                    counter++;
+                }
             }
 
-            html.Append("<tr>");
-            html.Append("<td border: 1px solid black;>&nbsp;</td>");
-            html.Append("<td border: 1px solid black;>&nbsp;</td>");
-            html.Append("<td border: 1px solid black;>&nbsp;</td>");
-            html.Append("<td border: 1px solid black;>&nbsp;</td>");
-            html.Append("<td border: 1px solid black;>&nbsp;</td>");
-            html.Append("<td border: 1px solid black;>&nbsp;</td>");
-            html.Append("<td border: 1px solid black;>&nbsp;</td>");
+            //html.Append("<tr>");
+            //html.Append("<td border: 1px solid black;>&nbsp;</td>");
+            //html.Append("<td border: 1px solid black;>&nbsp;</td>");
+            //html.Append("<td border: 1px solid black;>&nbsp;</td>");
+            //html.Append("<td border: 1px solid black;>&nbsp;</td>");
+            //html.Append("<td border: 1px solid black;>&nbsp;</td>");
+            //html.Append("<td border: 1px solid black;>&nbsp;</td>");
+            //html.Append("<td border: 1px solid black;>&nbsp;</td>");
             //html.Append("<td border: 1px solid black;>");
             //html.Append(Total.ToString());
             //html.Append("</td>");
-            html.Append("</tr>");
+            //html.Append("</tr>");
+
             html.Append("</table>");
 
             //table for footer of invoice
             html.Append("<table style =");
             html.Append("\"width: 100 %;border-left:solid;border-top:solid;border-bottom:solid;border-right:solid;\"");
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\">");
+            html.Append("<td class=\"auto-style3\">");
             html.Append("Company's PAN  :");  //CustomerName
             html.Append("</td>");
-            html.Append("<td class=\"auto - style5\">AAUPFS896E</td>");
-            html.Append("<td class=\"auto - style5\">Date & Time</td>");
-            html.Append("<td class=\"auto - style3\">");
+            html.Append("<td class=\"auto-style5\">AAUPFS896E</td>");
+            html.Append("<td class=\"auto-style5\">Date & Time</td>");
+            html.Append("<td class=\"auto-style3\">");
             html.Append(DateTime.Now);  //CustomerName
             html.Append("</td>");
             html.Append("</tr>");
 
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\">");
+            html.Append("<td class=\"auto-style3\">");
             html.Append("Declaration");  //CustomerName
             html.Append("</td>");
-            html.Append("<td class=\"auto - style5\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style5\">&nbsp;</td>");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">");
             html.Append("For SUNRISE MARKETING AGENTS");  //CustomerName
             html.Append("</td>");
             html.Append("</tr>");
 
             html.Append("<tr>");
-            html.Append("<td class=\"auto - style3\" colspan=\"2\">");
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">");
             html.Append("We declare that this invoice shows the actual price of the goods described and that all particulars are true and correct");  //CustomerName
             html.Append("</td>");
-            html.Append("<td class=\"auto - style5\">&nbsp;</td>");
-            html.Append("<td class=\"auto - style3\">&nbsp;</td>");            
+            html.Append("<td class=\"auto-style3\" colspan=\"2\">&nbsp;</td>");
+            //html.Append("<td class=\"auto-style3\">&nbsp;</td>");
             html.Append("</tr>");
 
             html.Append("</table>");

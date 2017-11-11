@@ -40,7 +40,6 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tblStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +47,6 @@
             this.deliveryNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quotetionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modalWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,7 +95,6 @@
             this.toolStripMenuItem2,
             this.toolStripMenuItem4,
             this.toolStripSeparator1,
-            this.toolStripSeparator2,
             this.tblStockToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(55, 20);
@@ -151,12 +148,6 @@
             this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
             this.toolStripSeparator1.Visible = false;
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(187, 6);
-            this.toolStripSeparator2.Visible = false;
-            // 
             // tblStockToolStripMenuItem
             // 
             this.tblStockToolStripMenuItem.Enabled = false;
@@ -173,8 +164,7 @@
             this.inventoryToolStripMenuItem,
             this.deliveryNoteToolStripMenuItem,
             this.invoiceToolStripMenuItem,
-            this.quotetionToolStripMenuItem,
-            this.modalWindowToolStripMenuItem});
+            this.quotetionToolStripMenuItem});
             this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
             this.transactionToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.transactionToolStripMenuItem.Text = "Transaction";
@@ -213,13 +203,6 @@
             this.quotetionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quotetionToolStripMenuItem.Text = "Quotation ";
             this.quotetionToolStripMenuItem.Click += new System.EventHandler(this.quotetionToolStripMenuItem_Click);
-            // 
-            // modalWindowToolStripMenuItem
-            // 
-            this.modalWindowToolStripMenuItem.Name = "modalWindowToolStripMenuItem";
-            this.modalWindowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.modalWindowToolStripMenuItem.Text = "ModalWindow";
-            this.modalWindowToolStripMenuItem.Click += new System.EventHandler(this.modalWindowToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -314,7 +297,6 @@
         private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quotetionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
@@ -323,7 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem stockReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modalWindowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
