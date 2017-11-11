@@ -223,7 +223,7 @@ namespace AC.Billing.UI.Transaction
             html.Append(Environment.NewLine);
             html.Append(".auto-style18 { border:1px solid black;width:55px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
-            html.Append(".auto-style19 { border:1px solid black;width:12px;height:23px;text-align:left;word-wrap:break-word; }");
+            html.Append(".auto-style19 { border:1px solid black;width:40px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
             html.Append(".auto-style20 { border:1px solid black;width:95px;height:23px;text-align:left;word-wrap:break-word; }");
             html.Append(Environment.NewLine);
@@ -383,7 +383,7 @@ namespace AC.Billing.UI.Transaction
                 html.Append("<tr >");
                 html.Append("<td class=\"auto-style9\">Sl.No.</td>");
                 html.Append("<td class=\"auto-style13\" style=\"vertical-align:middle\">Description of Goods</td>");
-                html.Append("<td class=\"auto-style19\">HSN/SAC</td>");                
+                html.Append("<td class=\"auto-style18\">HSN/SAC</td>");                
                 html.Append("<td class=\"auto-style17\">Quantity</td>");
                 html.Append("<td class=\"auto-style20\">Rate</td>");
                 //html.Append("<td class=\"auto-style22\">per</td>");
